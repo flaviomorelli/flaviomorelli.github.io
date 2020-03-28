@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flavio Mejia Morelli</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Flavio Mejia Morelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Mar 2020 10:58:29 +0100</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books</title>
+      <link>http://example.org/books/</link>
+      <pubDate>Sat, 28 Mar 2020 10:58:29 +0100</pubDate>
+      
+      <guid>http://example.org/books/</guid>
+      <description> The little duck the other Duck  </description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>http://example.org/blog/first/</link>
+      <pubDate>Sat, 28 Mar 2020 10:55:35 +0100</pubDate>
+      
+      <guid>http://example.org/blog/first/</guid>
+      <description>The most beautiful draft ever
+So beautiful</description>
+    </item>
+    
+  </channel>
+</rss>

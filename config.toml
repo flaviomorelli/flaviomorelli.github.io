@@ -1,0 +1,72 @@
+baseURL = "https://flaviomorelli.github.io/"
+languageCode = "en-us"
+
+publishDir = "docs"
+
+title = "Flavio Morelli"
+theme = "anatole"
+
+SummaryLength = 10
+
+Home = "home"
+
+Search = "true"
+
+[params]
+title = "Flavio Morelli"
+author = "Flavio Morelli"
+description = "Data Scientist | M. Sc. Statistics @ HU Berlin | Statistical Consultant @ FU Berlin"
+profilePicture = "images/flavio_rest.png"
+
+[params.math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+## Social links
+[[params.socialIcons]]
+icon = "fa-linkedin"
+title = "Linkedin"
+url = "https://de.linkedin.com/in/mexiamorelli"
+
+[[params.socialIcons]]
+icon = "fa-twitter"
+title = "twitter"
+url = "https://www.twitter.com/mexiamorelli"
+
+[[params.socialIcons]]
+icon = "fa-github"
+title = "GitHub"
+url = "https://github.com/flaviomorelli/"
+
+[[params.socialIcons]]
+icon = "fa-envelope"
+title = "e-mail"
+url = "mailto:contact@flaviomorelli.com"
+
+## Menu
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Posts"
+  weight = 200
+  identifier = "posts"
+  url = "/post/"
+
+  [[menu.main]]
+  name = "Talks"
+  weight = 300
+  identifier = "talks"
+  url = "/talks/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 400
+  identifier = "about"
+  url = "/about/"

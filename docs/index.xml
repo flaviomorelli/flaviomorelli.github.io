@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flavio Morelli</title>
+    <link>http://flaviomorelli.github.io/</link>
+    <description>Recent content on Flavio Morelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Mar 2020 13:53:41 +0100</lastBuildDate><atom:link href="http://flaviomorelli.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://flaviomorelli.github.io/about/</link>
+      <pubDate>Mon, 14 Sep 2020 22:39:28 +0200</pubDate>
+      
+      <guid>http://flaviomorelli.github.io/about/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Talks</title>
+      <link>http://flaviomorelli.github.io/talks/</link>
+      <pubDate>Sat, 28 Mar 2020 13:59:02 +0100</pubDate>
+      
+      <guid>http://flaviomorelli.github.io/talks/</guid>
+      <description>I gave this very important talk at xy</description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>http://flaviomorelli.github.io/post/first/</link>
+      <pubDate>Sat, 28 Mar 2020 13:53:41 +0100</pubDate>
+      
+      <guid>http://flaviomorelli.github.io/post/first/</guid>
+      <description>The first thing that I want to say
+is a very</description>
+    </item>
+    
+    <item>
+      <title>Second</title>
+      <link>http://flaviomorelli.github.io/post/second/</link>
+      <pubDate>Fri, 27 Mar 2020 14:01:25 +0100</pubDate>
+      
+      <guid>http://flaviomorelli.github.io/post/second/</guid>
+      <description>invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Third</title>
+      <link>http://flaviomorelli.github.io/post/third/</link>
+      <pubDate>Wed, 25 Mar 2020 14:01:51 +0100</pubDate>
+      
+      <guid>http://flaviomorelli.github.io/post/third/</guid>
+      <description>olor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+  </channel>
+</rss>

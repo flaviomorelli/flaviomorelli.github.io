@@ -3,64 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://example.com/</loc>
     <lastmod>2020-03-28T13:59:02+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/talks/</loc>
+    <loc>https://example.com/talks/</loc>
     <lastmod>2020-03-28T13:59:02+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/about/</loc>
+    <loc>https://example.com/about/</loc>
     <lastmod>2020-03-28T13:53:49+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/first/</loc>
+    <loc>https://example.com/post/first/</loc>
     <lastmod>2020-03-28T13:53:41+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://example.com/post/</loc>
     <lastmod>2020-03-28T13:53:41+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/second/</loc>
+    <loc>https://example.com/post/second/</loc>
     <lastmod>2020-03-27T14:01:25+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/third/</loc>
+    <loc>https://example.com/post/third/</loc>
     <lastmod>2020-03-25T14:01:51+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/tags/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://example.com/tags/</loc>
   </url>
   
 </urlset>

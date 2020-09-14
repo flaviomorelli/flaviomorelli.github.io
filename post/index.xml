@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Flavio Morelli</title>
-    <link>http://example.org/post/</link>
-    <description>Recent content in Posts on Flavio Morelli</description>
+    <title>Posts on Hugo Hermit</title>
+    <link>https://example.com/post/</link>
+    <description>Recent content in Posts on Hugo Hermit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Sat, 28 Mar 2020 13:53:41 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First</title>
-      <link>http://example.org/post/first/</link>
+      <link>https://example.com/post/first/</link>
       <pubDate>Sat, 28 Mar 2020 13:53:41 +0100</pubDate>
       
-      <guid>http://example.org/post/first/</guid>
+      <guid>https://example.com/post/first/</guid>
       <description>The first thing that I want to say
 is a very
  very  imprtant
@@ -25,19 +26,19 @@ thing</description>
     
     <item>
       <title>Second</title>
-      <link>http://example.org/post/second/</link>
+      <link>https://example.com/post/second/</link>
       <pubDate>Fri, 27 Mar 2020 14:01:25 +0100</pubDate>
       
-      <guid>http://example.org/post/second/</guid>
+      <guid>https://example.com/post/second/</guid>
       <description>invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</description>
     </item>
     
     <item>
       <title>Third</title>
-      <link>http://example.org/post/third/</link>
+      <link>https://example.com/post/third/</link>
       <pubDate>Wed, 25 Mar 2020 14:01:51 +0100</pubDate>
       
-      <guid>http://example.org/post/third/</guid>
+      <guid>https://example.com/post/third/</guid>
       <description>olor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</description>
     </item>
     

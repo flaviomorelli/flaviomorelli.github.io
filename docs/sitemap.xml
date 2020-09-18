@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://flaviomorelli.github.io/post/5-book-recommendations-summer-2020/</loc>
+    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.github.io/tags/books/</loc>
+    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.github.io/</loc>
+    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.github.io/post/</loc>
+    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.github.io/tags/recommendation/</loc>
+    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.github.io/tags/</loc>
+    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://flaviomorelli.github.io/about/</loc>
     <lastmod>2020-09-14T22:39:28+02:00</lastmod>
   </url>
@@ -18,16 +48,6 @@
   </url>
   
   <url>
-    <loc>https://flaviomorelli.github.io/</loc>
-    <lastmod>2020-03-28T13:53:41+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.github.io/post/</loc>
-    <lastmod>2020-03-28T13:53:41+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://flaviomorelli.github.io/post/second/</loc>
     <lastmod>2020-03-27T14:01:25+01:00</lastmod>
   </url>
@@ -39,10 +59,6 @@
   
   <url>
     <loc>https://flaviomorelli.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.github.io/tags/</loc>
   </url>
   
 </urlset>

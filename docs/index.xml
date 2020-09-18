@@ -34,33 +34,5 @@
       <description>2019 Berlin Bayesians – Variational Bayes: A Gentle Introduction</description>
     </item>
     
-    <item>
-      <title>First</title>
-      <link>https://flaviomorelli.github.io/post/first/</link>
-      <pubDate>Sat, 28 Mar 2020 13:53:41 +0100</pubDate>
-      
-      <guid>https://flaviomorelli.github.io/post/first/</guid>
-      <description>The first thing that I want to say
-is a very</description>
-    </item>
-    
-    <item>
-      <title>Second</title>
-      <link>https://flaviomorelli.github.io/post/second/</link>
-      <pubDate>Fri, 27 Mar 2020 14:01:25 +0100</pubDate>
-      
-      <guid>https://flaviomorelli.github.io/post/second/</guid>
-      <description>invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
-      <title>Third</title>
-      <link>https://flaviomorelli.github.io/post/third/</link>
-      <pubDate>Wed, 25 Mar 2020 14:01:51 +0100</pubDate>
-      
-      <guid>https://flaviomorelli.github.io/post/third/</guid>
-      <description>olor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
   </channel>
 </rss>

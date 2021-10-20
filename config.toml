@@ -1,4 +1,4 @@
-baseURL = "https://flaviomorelli.github.io/"
+baseURL = "https://flaviomorelli.com/"
 languageCode = "en-us"
 
 publishDir = "docs"
@@ -15,11 +15,11 @@ Search = "true"
 [params]
 title = "Flavio Morelli"
 author = "Flavio Morelli"
-description = "Data Scientist | M. Sc. Statistics @ HU Berlin | Statistical Consultant @ FU Berlin"
+description = "Data Scientist | M. Sc. Statistics @ HU Berlin | Machine Learning Intern @ Bayer"
 profilePicture = "images/flavio_rest.png"
 
 [params.math]
-enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+enable = true  # options: true, false. Enable math support globally, default: false. 
 use = "katex"  # options: "katex", "mathjax". default is "katex".
 
 ## Social links
@@ -41,7 +41,7 @@ url = "https://github.com/flaviomorelli/"
 [[params.socialIcons]]
 icon = "fa-envelope"
 title = "e-mail"
-url = "mailto:contact@flaviomorelli.com"
+url = "mailto:info@flaviomorelli.com"
 
 ## Menu
 

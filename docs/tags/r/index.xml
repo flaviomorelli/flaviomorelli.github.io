@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Flavio Morelli</title>
+    <link>https://flaviomorelli.com/tags/r/</link>
+    <description>Recent content in R on Flavio Morelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Mar 2021 22:27:21 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membership tests in Julia, R and Python</title>
+      <link>https://flaviomorelli.com/post/membership_test/</link>
+      <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/membership_test/</guid>
+      <description>Membership tests – checking whether an element is in a collection – is a common operation in statistical programming.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bias on Flavio Morelli</title>
+    <link>https://flaviomorelli.com/tags/bias/</link>
+    <description>Recent content in bias on Flavio Morelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Feb 2021 16:58:18 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/tags/bias/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The problem with interpreting biased coefficients</title>
+      <link>https://flaviomorelli.com/post/bias/</link>
+      <pubDate>Thu, 25 Feb 2021 16:58:18 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/bias/</guid>
+      <description>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy.</description>
+    </item>
+    
+  </channel>
+</rss>

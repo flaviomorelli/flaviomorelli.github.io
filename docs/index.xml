@@ -2,35 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flavio Morelli</title>
-    <link>https://flaviomorelli.github.io/</link>
+    <link>https://flaviomorelli.com/</link>
     <description>Recent content on Flavio Morelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2020 10:55:01 +0200</lastBuildDate><atom:link href="https://flaviomorelli.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 22:27:21 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membership tests in Julia, R and Python</title>
+      <link>https://flaviomorelli.com/post/membership_test/</link>
+      <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/membership_test/</guid>
+      <description>Membership tests – checking whether an element is in a collection – is a common operation in statistical programming.</description>
+    </item>
+    
+    <item>
+      <title>The problem with interpreting biased coefficients</title>
+      <link>https://flaviomorelli.com/post/bias/</link>
+      <pubDate>Thu, 25 Feb 2021 16:58:18 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/bias/</guid>
+      <description>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy.</description>
+    </item>
+    
     <item>
       <title>5 Book Recommendations from the summer of corona</title>
-      <link>https://flaviomorelli.github.io/post/5-book-recommendations-summer-2020/</link>
+      <link>https://flaviomorelli.com/post/5-book-recommendations-summer-2020/</link>
       <pubDate>Fri, 18 Sep 2020 10:55:01 +0200</pubDate>
       
-      <guid>https://flaviomorelli.github.io/post/5-book-recommendations-summer-2020/</guid>
-      <description>5 book recommendations from the summer of corona Summer is almost over, so I thought I would share some books I have learned something from during the last couple of months.</description>
+      <guid>https://flaviomorelli.com/post/5-book-recommendations-summer-2020/</guid>
+      <description>Summer is almost over, so I thought I would share some books I have learned something from during the last couple of months.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://flaviomorelli.github.io/about/</link>
+      <link>https://flaviomorelli.com/about/</link>
       <pubDate>Mon, 14 Sep 2020 22:39:28 +0200</pubDate>
       
-      <guid>https://flaviomorelli.github.io/about/</guid>
+      <guid>https://flaviomorelli.com/about/</guid>
       <description>Hi! My name is Flavio. I am a statistician, currently enrolled as a Master&amp;rsquo;s student at the Humboldt University of Berlin.</description>
     </item>
     
     <item>
       <title>Talks</title>
-      <link>https://flaviomorelli.github.io/talks/</link>
+      <link>https://flaviomorelli.com/talks/</link>
       <pubDate>Sat, 28 Mar 2020 13:59:02 +0100</pubDate>
       
-      <guid>https://flaviomorelli.github.io/talks/</guid>
+      <guid>https://flaviomorelli.com/talks/</guid>
       <description>2019 Berlin Bayesians – Variational Bayes: A Gentle Introduction</description>
     </item>
     

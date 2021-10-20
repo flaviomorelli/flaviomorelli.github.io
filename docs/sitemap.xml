@@ -3,47 +3,92 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://flaviomorelli.github.io/post/5-book-recommendations-summer-2020/</loc>
+    <loc>https://flaviomorelli.com/</loc>
+    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/julia/</loc>
+    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/post/membership_test/</loc>
+    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/post/</loc>
+    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/programming/</loc>
+    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/python/</loc>
+    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/r/</loc>
+    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/</loc>
+    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/bias/</loc>
+    <lastmod>2021-02-25T16:58:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/confounding/</loc>
+    <lastmod>2021-02-25T16:58:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/statistics/</loc>
+    <lastmod>2021-02-25T16:58:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/post/bias/</loc>
+    <lastmod>2021-02-25T16:58:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/post/5-book-recommendations-summer-2020/</loc>
     <lastmod>2020-09-18T10:55:01+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://flaviomorelli.github.io/tags/books/</loc>
+    <loc>https://flaviomorelli.com/tags/books/</loc>
     <lastmod>2020-09-18T10:55:01+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://flaviomorelli.github.io/</loc>
+    <loc>https://flaviomorelli.com/tags/recommendation/</loc>
     <lastmod>2020-09-18T10:55:01+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://flaviomorelli.github.io/post/</loc>
-    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.github.io/tags/recommendation/</loc>
-    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.github.io/tags/</loc>
-    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.github.io/about/</loc>
+    <loc>https://flaviomorelli.com/about/</loc>
     <lastmod>2020-09-14T22:39:28+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://flaviomorelli.github.io/talks/</loc>
+    <loc>https://flaviomorelli.com/talks/</loc>
     <lastmod>2020-03-28T13:59:02+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://flaviomorelli.github.io/categories/</loc>
+    <loc>https://flaviomorelli.com/categories/</loc>
   </url>
   
 </urlset>

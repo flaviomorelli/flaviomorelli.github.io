@@ -2,18 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Flavio Morelli</title>
-    <link>https://flaviomorelli.github.io/post/</link>
+    <link>https://flaviomorelli.com/post/</link>
     <description>Recent content in Posts on Flavio Morelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2020 10:55:01 +0200</lastBuildDate><atom:link href="https://flaviomorelli.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 22:27:21 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membership tests in Julia, R and Python</title>
+      <link>https://flaviomorelli.com/post/membership_test/</link>
+      <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/membership_test/</guid>
+      <description>Membership tests – checking whether an element is in a collection – is a common operation in statistical programming.</description>
+    </item>
+    
+    <item>
+      <title>The problem with interpreting biased coefficients</title>
+      <link>https://flaviomorelli.com/post/bias/</link>
+      <pubDate>Thu, 25 Feb 2021 16:58:18 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/bias/</guid>
+      <description>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy.</description>
+    </item>
+    
     <item>
       <title>5 Book Recommendations from the summer of corona</title>
-      <link>https://flaviomorelli.github.io/post/5-book-recommendations-summer-2020/</link>
+      <link>https://flaviomorelli.com/post/5-book-recommendations-summer-2020/</link>
       <pubDate>Fri, 18 Sep 2020 10:55:01 +0200</pubDate>
       
-      <guid>https://flaviomorelli.github.io/post/5-book-recommendations-summer-2020/</guid>
-      <description>5 book recommendations from the summer of corona Summer is almost over, so I thought I would share some books I have learned something from during the last couple of months.</description>
+      <guid>https://flaviomorelli.com/post/5-book-recommendations-summer-2020/</guid>
+      <description>Summer is almost over, so I thought I would share some books I have learned something from during the last couple of months.</description>
     </item>
     
   </channel>

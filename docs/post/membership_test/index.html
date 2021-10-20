@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Flavio Morelli | Membership tests in Julia, R and Python </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Data Scientist | M. Sc. Statistics @ HU Berlin | Statistical Consultant @ FU Berlin">
+    
+    <link rel="stylesheet" href="https://flaviomorelli.com/css/style.min.e32550f4fc7d834a8b0ac0e965927404738b470c28c2c4c35102bce0126ead50.css" integrity="sha256-4yVQ9Px9g0qLCsDpZZJ0BHOLRwwowsTDUQK84BJurVA=" crossorigin="anonymous" type="text/css"><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://flaviomorelli.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://flaviomorelli.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://flaviomorelli.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://flaviomorelli.com/favicon-16x16.png">
+    <link rel="canonical" href="https://flaviomorelli.com/post/membership_test/">
+    
+    
+    <script type="text/javascript" src="https://flaviomorelli.com/js/anatole-header.min.7e2fc0724240b28c6e214687e73a4a6eb6c196bbace546b9dc86e94cca120b5c.js" integrity="sha256-fi/AckJAsoxuIUaH5zpKbrbBlrus5Ua53IbpTMoSC1w=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Membership tests in Julia, R and Python"/>
+<meta name="twitter:description" content="Membership tests – checking whether an element is in a collection – is a common operation in statistical programming."/>
+
+</head>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://flaviomorelli.com/images/flavio_rest.png" alt="profile picture">
+            <h3 title=""><a href="/">Flavio Morelli</a></h3>
+            <div class="description">
+                <p>Data Scientist | M. Sc. Statistics @ HU Berlin | Statistical Consultant @ FU Berlin</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://de.linkedin.com/in/mexiamorelli" rel="me" aria-label="Linkedin">
+                    <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/mexiamorelli" rel="me" aria-label="twitter">
+                    <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/flaviomorelli/" rel="me" aria-label="GitHub">
+                    <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:info@flaviomorelli.com" rel="me" aria-label="e-mail">
+                    <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Flavio Morelli 2021 </div>
+    </div>
+</div>
+<div class="main">
+            <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+        
+        <li><a  href="/"  title="">Home</a></li>
+        
+        
+        <li><a  href="/post/"  title="">Posts</a></li>
+        
+        
+        <li><a  href="/talks/"  title="">Talks</a></li>
+        
+        
+        <li><a  href="/about/"  title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Membership tests in Julia, R and Python
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i>
+          <span class="date">Thu, Mar 11, 2021</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">10-minute read</span>
+        </div>
+        
+        </div>
+
+    <p>Membership tests –  checking whether an element is in a collection – is a common operation in statistical programming. However, depending on the programming language, the interface and underlying assumptions can vary a lot. After a short introduction to how Python and R implement membership tests, we will take a deeper look into Julia, touching on unique features such as <strong>generic programming</strong> and <strong>multiple dispatch</strong>.</p>
+<h2 id="1-membership-test-operations-in-python">1. Membership test operations in Python</h2>
+<p>Usually, a membership test has its own reserved word or special operation in the language. For example, in Python one could write</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+False
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>] <span style="color:#f92672">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+False
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">in</span> <span style="color:#e6db74">&#34;abc&#34;</span>
+True
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#e6db74">&#34;ab&#34;</span> <span style="color:#f92672">in</span> <span style="color:#e6db74">&#34;abc&#34;</span>
+True
+</code></pre></div><p>Note that in Python the <code>in</code> keyword is also used inside the for loop (<code>for elem in iterable</code>). If we are testing <code>list_1 in list_2</code>, we will test whether the first list as a whole is contained in the other list. When dealing with strings, <code>in</code> tests whether our first string is a substring of the second string.</p>
+<p>If you are working with <code>numpy</code> arrays, the story is a bit different – as usual with <code>numpy</code>. We need the function <code>numpy.isin</code> for membership tests.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">&gt;&gt;&gt;</span> a <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(<span style="color:#ae81ff">1</span>) <span style="color:#75715e"># This array has zero dimensions!</span>
+array(<span style="color:#ae81ff">1</span>) 
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> num_array <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>)
+array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>])
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> np<span style="color:#f92672">.</span>isin(a, num_array) <span style="color:#75715e"># Same number of dimensions as variable a</span>
+array(True)
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> np<span style="color:#f92672">.</span>isin(np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>]), num_array) <span style="color:#75715e"># 1 dimension. The input dimensions are kept!</span>
+array([ True])
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> np<span style="color:#f92672">.</span>isin(np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]), num_array) <span style="color:#75715e"># Elementwise check</span>
+array([ True,  True])
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> np<span style="color:#f92672">.</span>isin(np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]), invert<span style="color:#f92672">=</span>True) <span style="color:#75715e"># set invert=True to get &#39;not in&#39;</span>
+array([False, False])
+</code></pre></div><p>First, we notice that the input dimensions are preserved in the membership test. Second, the membership test is done elementwise in <code>numpy</code>. This was not the case when we tested <code>[1, 2] in [1, 2, 3]</code>, where <code>[1, 2]</code> as a whole was taken to be a single element. Third, it is not so easy to just write something like <code>not 4 in [1, 2, 3]</code> when dealing with <code>numpy</code> arrays. To test non-membership, we have to set <code>invert=True</code>, because the dimensions of the input array are preserved. The <code>pandas</code> library also has an <code>isin</code> function for <code>Series</code> and <code>DataFrames</code>, which works similarly, but without the <code>invert</code> option.</p>
+<h2 id="2-membership-test-operations-in-r">2. Membership test operations in R</h2>
+<p>In R, there is the <code>%in%</code> operator which is just another way of using the <code>match</code> function (check the documentation <code>?%in%</code>). This function is necessary because in R <code>in</code> can only be used in a <code>for</code>-loop. There are some differences with base Python, but the results are very similar to <code>np.isin</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">R<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+[1] <span style="color:#66d9ef">TRUE</span>
+
+R<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+[1] <span style="color:#66d9ef">TRUE</span> <span style="color:#66d9ef">TRUE</span>
+
+R<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">list</span>(first <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, second <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, third <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>)
+[1] <span style="color:#66d9ef">TRUE</span>
+
+R<span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">%in%</span> <span style="color:#e6db74">&#34;abc&#34;</span>
+[1] <span style="color:#66d9ef">FALSE</span>
+</code></pre></div><p>The first example is just checking whether 1 is contained within the vector with the elements 1, 2 and 3. The last three examples, however, are more similar to the way <code>numpy</code> deals with membership tests. In the second example, it is checking whether each one of the elements in <code>c(1, 2)</code> is in the vector <code>c(1, 2, 3)</code>. This differs from the base Python version, which takes the whole list <code>[1, 2]</code> to be the element to be searched in the iterable, therefore returning false. In base Python, you would rather use a list comprehension to get the same kind of behavior as R or <code>numpy</code>: <code>[i in (1, 2, 3) for i in (1, 2)]</code>.</p>
+<p>The third example shows that a list in R behaves pretty much like a vector. The single elements of the list can be named (here: <code>first, second, third</code>), but the names themselves are not taken into account by <code>%in%</code> – not unlike a named tuple. More surprisingly to Python users, the last example with a string returns <code>FALSE</code>. This is because strings are <em>not</em> <strong>iterables</strong> in R (remember this is a language that in a way is almost as old as C!). There are special functions for this such as <code>grepl</code> in the <code>base</code> package and <code>str_detect</code> from the package <code>stringr</code>, also included in the <code>tidyverse</code>.</p>
+<h2 id="3-julia">3. Julia</h2>
+<p>Julia is a modern programming language that is mainly focused on scientific computation. It feels more natural for scientific computing than Python and it has a more modern design than R. Julia&rsquo;s behavior for membership tests is more similar to base Python, but it differs in how it deals with strings.</p>
+<h3 id="in-in-ni--in-julia"><code>in</code>, \(\in\), \(\ni\)  in Julia</h3>
+<p>The most basic operation is <code>in</code> which tests whether an item is in a given array. Going back to the first example with basic Python we see that the results are the same:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<span style="color:#66d9ef">false</span>
+
+julia<span style="color:#f92672">&gt;</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>] <span style="color:#66d9ef">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+<span style="color:#66d9ef">false</span>
+</code></pre></div><p>However, <code>in</code> is not just a keyword, but a function. As Julia is based on generic programming and multiple dispatch, it actually has 33  different versions of the <code>in</code> function. In contrast to Python and R, Julia is statically typed. Each version has a <strong>different signature</strong> that depends on the type of the parameters:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">in</span> <span style="color:#75715e"># type the function name to get the number of methods</span>
+<span style="color:#66d9ef">in</span> (generic <span style="color:#66d9ef">function</span> with <span style="color:#ae81ff">33</span> methods)
+    
+julia<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">in</span>(<span style="color:#ae81ff">4</span>, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]) <span style="color:#75715e"># call in the usual function notation</span>
+<span style="color:#66d9ef">false</span>
+    
+julia<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">@which</span> <span style="color:#66d9ef">in</span>(<span style="color:#ae81ff">4</span>, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]) <span style="color:#75715e"># signature of the method based on the types</span>
+<span style="color:#66d9ef">in</span>(x, itr) <span style="color:#66d9ef">in</span> Base at operators<span style="color:#f92672">.</span>jl<span style="color:#f92672">:</span><span style="color:#ae81ff">1055</span>
+</code></pre></div><p>So when calling <code>in</code> with an integer and an array we get the signature <code>in(x, itr)</code>. We have <strong>two generic types</strong> called <code>x</code> and iterable <code>itr</code>. We can check the code in <code>operators.jl</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#66d9ef">function</span> <span style="color:#66d9ef">in</span>(x, itr)
+    anymissing <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+    <span style="color:#66d9ef">for</span> y <span style="color:#66d9ef">in</span> itr
+        v <span style="color:#f92672">=</span> (y <span style="color:#f92672">==</span> x)
+        <span style="color:#66d9ef">if</span> ismissing(v)
+            anymissing <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+        <span style="color:#66d9ef">elseif</span> v
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+        <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">return</span> anymissing <span style="color:#f92672">?</span> missing <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Although we are not stating it explicitly, we assume through duck typing that <code>itr</code> is an iterable, because we are using it in the <code>for</code> loop.</p>
+<p>Now, let&rsquo;s see what happens when we try to do a similar membership test with strings:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#66d9ef">in</span> <span style="color:#e6db74">&#34;abc&#34;</span>
+ERROR<span style="color:#f92672">:</span> use occursin(x, y) <span style="color:#66d9ef">for</span> string containment
+  
+julia<span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#e6db74">&#34;abc&#34;</span>
+<span style="color:#66d9ef">true</span>
+  
+julia<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">@which</span> <span style="color:#66d9ef">in</span>(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#75715e"># get the method signature</span>
+<span style="color:#66d9ef">in</span>(c<span style="color:#f92672">::</span>AbstractChar, s<span style="color:#f92672">::</span><span style="color:#66d9ef">AbstractString</span>) <span style="color:#66d9ef">in</span> Base at strings<span style="color:#f92672">/</span>search<span style="color:#f92672">.</span>jl<span style="color:#f92672">:</span><span style="color:#ae81ff">141</span>
+</code></pre></div><p>Surprisingly, <code>&quot;a&quot;</code> fails while there is no problem with <code>'a'</code>. Unlike Python or R, Julia treats single quotation marks as characters and double quotations as strings. They are two different types, like in good old C. Julia is telling us that if we want to test whether <code>&quot;a&quot;</code> is a substring of <code>&quot;abc&quot;</code>, we have to use the <code>occursin</code> function. However, we can test whether the character <code>'a'</code> is in the <code>&quot;abc&quot;</code> string with the <code>in</code> function. For this comparison, we are using a different comparison function from <code>Base</code> which can be found in <code>strings/search.jl</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#66d9ef">in</span>(c<span style="color:#f92672">::</span>AbstractChar, s<span style="color:#f92672">::</span><span style="color:#66d9ef">AbstractString</span>) <span style="color:#f92672">=</span> (findfirst(isequal(c),s)<span style="color:#f92672">!==</span>nothing)
+</code></pre></div><p>With <strong>multiple dispatch</strong>, we determine which function to use at runtime depending on the types. This version of the <code>in</code> function in particular is using a specialized function <code>findfirst</code> for strings, which checks for each character in <code>s</code> whether it is equal to <code>c</code> and then checks whether something was found at all with <code>!==nothing</code>. (<code>nothing</code> is similar to <code>None</code> in Python.)</p>
+<p>There is also an alias to the <code>in</code> function, \(\in\), which can be used by writing <code>\in</code> and then hitting the <code>&lt;tab&gt;</code> key. Its reverse is \(\ni\), which is just swaps the arguments. The following are equivalent:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">∈</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>] <span style="color:#75715e"># as infix operator</span>
+<span style="color:#66d9ef">false</span>
+
+julia<span style="color:#f92672">&gt;</span> <span style="color:#f92672">∈</span>(<span style="color:#ae81ff">4</span>, [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]) <span style="color:#75715e"># as function</span>
+<span style="color:#66d9ef">false</span>
+
+julia<span style="color:#f92672">&gt;</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>] <span style="color:#f92672">∋</span> <span style="color:#ae81ff">4</span> 
+<span style="color:#66d9ef">false</span>
+</code></pre></div><p>As a side note, arrays in Julia do not have to contain elements of the same type. Usually, the element type will be <code>Any</code> when combining types. However, note that in most cases this is less efficient than making sure all the elements are of the same type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> [<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;c&#39;</span>]
+<span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>element <span style="color:#66d9ef">Array</span>{<span style="color:#66d9ef">Any</span>,<span style="color:#ae81ff">1</span>}<span style="color:#f92672">:</span>
+ <span style="color:#ae81ff">1</span>
+  <span style="color:#e6db74">&#39;c&#39;</span><span style="color:#f92672">:</span> ASCII<span style="color:#f92672">/</span>Unicode U<span style="color:#f92672">+</span><span style="color:#ae81ff">0063</span> (category Ll<span style="color:#f92672">:</span> Letter, lowercase)
+</code></pre></div><h3 id="broadcasting-in-julia">Broadcasting in Julia</h3>
+<p>We still have not addressed the question of whether it is possible to do membership tests as in <code>numpy</code> or R. The first idea would be to try the broadcasting capabilities of Julia. This can be used by adding a dot before an infix operator or after a function name:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>] <span style="color:#f92672">.∈</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]
+ERROR<span style="color:#f92672">:</span> <span style="color:#66d9ef">DimensionMismatch</span>(<span style="color:#e6db74">&#34;arrays could not be broadcast to a common size; got a dimension with lengths 2 and 3&#34;</span>)
+</code></pre></div><p>That does not work as expected. Julia is trying to do an elementwise comparison, but the array <strong>dimensions do not match</strong>. Unlike R or <code>numpy</code>, Julia does not recycle or copy arrays nor tries to interpret what you mean. You get what you type. Let&rsquo;s look at a broadcasting example that would work</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>] <span style="color:#f92672">.∈</span> [[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>]]
+<span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>element <span style="color:#66d9ef">BitArray</span>{<span style="color:#ae81ff">1</span>}<span style="color:#f92672">:</span>
+ <span style="color:#ae81ff">1</span>
+ <span style="color:#ae81ff">0</span>
+ 
+julia<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">in</span><span style="color:#f92672">.</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], [[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>], [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>]]) <span style="color:#75715e"># this alternative does the same</span>
+</code></pre></div><p>Julia tests whether <code>1</code> is in <code>[1, 4]</code> and whether <code>2</code> is in <code>[3, 0]</code>. The result is <code>1</code> (true) for the first test and <code>0</code> for the second one. But this is not what we are trying to replicate. It turns out that there is no built-in function to replicate the behavior of <code>numpy</code> and R. Again, we need a <strong>list comprehension</strong>, which is also a familiar feature of Python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Julia" data-lang="Julia">julia<span style="color:#f92672">&gt;</span> [i <span style="color:#66d9ef">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>] <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]]
+<span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>element <span style="color:#66d9ef">Array</span>{<span style="color:#66d9ef">Bool</span>,<span style="color:#ae81ff">1</span>}<span style="color:#f92672">:</span>
+ <span style="color:#ae81ff">1</span>
+ <span style="color:#ae81ff">1</span>
+</code></pre></div><p>This is the exact result we got from R and <code>numpy</code>. However, the type is now different: <code>Array{Bool,1}</code> instead of <code>BitArray{1}</code>. This is not a major issue. They are both subtypes of <code>AbstractArray{Bool}</code> and are mostly interchangeable. They only differ in how they store the boolean value.</p>
+<p>We now turn to the next major topic: how to do test membership for strings in Julia.</p>
+<h3 id="strings-occursin-in-julia">Strings: <code>occursin</code> in Julia</h3>
+<p>Membership tests can be done with the <code>in</code> function for a wide array of types. However, strings their own specialized function: <code>occursin</code>. There are two reasons for this. First, strings are <em>not</em> iterables in Julia, unlike Python. Second, <code>occursin</code> has functionality specific to strings. Third, testing for membership in a collection is not necessarily the same as testing a substring or a regular expression. Let&rsquo;s take a look at the method signature:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">occursin(needle<span style="color:#f92672">::</span><span style="color:#66d9ef">Union</span>{<span style="color:#66d9ef">AbstractString</span>,<span style="color:#66d9ef">Regex</span>,AbstractChar}, haystack<span style="color:#f92672">::</span><span style="color:#66d9ef">AbstractString</span>)
+</code></pre></div><p>Basically, <code>occursin</code> finds a &lsquo;needle&rsquo; in the &lsquo;haystack&rsquo;. The needle can be either a subtype of <code>AbstractString</code> or <code>AbstractCharacter</code>, but <em>also</em> a regular expression.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> occursin(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#75715e"># is the needle a substring of the haystack?</span>
+<span style="color:#66d9ef">true</span>
+
+julia<span style="color:#f92672">&gt;</span> occursin(<span style="color:#e6db74">&#34;ab&#34;</span>, <span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#75715e"># the needle string can be arbitrary</span>
+<span style="color:#66d9ef">true</span>
+
+julia<span style="color:#f92672">&gt;</span> occursin(<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#75715e"># when needle is a character it is the same as in(&#39;a&#39;, in &#34;abc&#34;)</span>
+<span style="color:#66d9ef">true</span>
+
+julia<span style="color:#f92672">&gt;</span> occursin(<span style="color:#e6db74">r&#34;a.c&#34;</span>, <span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#75715e"># using a regular expression</span>
+<span style="color:#66d9ef">true</span>
+
+</code></pre></div><p>It is very neat that there is a built-in function for doing substring tests that also allows you to check <strong>regular expressions</strong> without using a regular expressions library. Moreover, we can use both <code>in</code> and <code>occursin</code> to test character membership in a string. However, we can check with the <code>@code_native</code> macro that the implementations of both functions are different.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">@code_native</span> <span style="color:#66d9ef">in</span>(<span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#34;abc&#34;</span>)
+<span style="color:#f92672">...</span>
+julia<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">@code_native</span> occursin(<span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#34;abc&#34;</span>)
+<span style="color:#f92672">...</span>
+</code></pre></div><p>The output is omitted, but one key difference is that <code>occursin</code> does not use the <code>findfirst</code> function that we showed earlier for the <code>in</code> function.</p>
+<h2 id="4-conclusion">4. Conclusion</h2>
+<p>In this post, looked at membership tests in Julia, Python and R. This is a very common operation when programming. However, even with simple functions it is worth looking at the details, as it reveals a lot about design choices of a programming language. Personally, I think that Julia has a much more consistent an modern feel to it. Python is great, but the differences between Python, <code>numpy</code>, <code>pandas</code>, <code>torch</code>, etc. can be frustrating. As for R, it is a bag of surprises. The language is much older and does not always match the intuition you develop with a more modern programming langugae. More often than not you have to try something out, and see if it works as expected!</p>
+<p>Follow me on Twitter <a href="https://twitter.com/mexiamorelli">@mexiamorelli</a></p>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/julia/">julia</a><a class="tag" href="/tags/python/">python</a><a class="tag" href="/tags/r/">R</a><a class="tag" href="/tags/programming/">programming</a></span>
+
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/&#43;DiW/UqRcLbRjq" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l&#43;B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd&#43;qj&#43;o24G5ZU2zJz" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script></body>
+
+</html>

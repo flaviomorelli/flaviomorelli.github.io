@@ -6,7 +6,16 @@
     <description>Recent content on Flavio Morelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Mar 2021 22:27:21 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Feb 2022 17:51:15 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book Review: Hidden Truths by David Fubini</title>
+      <link>https://flaviomorelli.com/post/hidden/</link>
+      <pubDate>Sun, 13 Feb 2022 17:51:15 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/hidden/</guid>
+      <description>For those of us who are not in business consulting, it is sometimes hard to truly understand what sets apart top strategy firms like McKinsey, BCG or Bain.</description>
+    </item>
+    
     <item>
       <title>Membership tests in Julia, R and Python</title>
       <link>https://flaviomorelli.com/post/membership_test/</link>

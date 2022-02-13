@@ -5,6 +5,7 @@ Description: ""
 Tags: []
 Categories: []
 DisableComments: false
+draft: true
 ---
 
 After spending the summer working on my masters thesis, I thought I would do another list with book recommendations from the last few months. Here's the list:

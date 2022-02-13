@@ -3,8 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://flaviomorelli.com/post/hidden/</loc>
+    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/books/</loc>
+    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/business/</loc>
+    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://flaviomorelli.com/</loc>
-    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
+    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/post/</loc>
+    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/recommendation/</loc>
+    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/</loc>
+    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
   </url>
   
   <url>
@@ -14,11 +44,6 @@
   
   <url>
     <loc>https://flaviomorelli.com/post/membership_test/</loc>
-    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/post/</loc>
     <lastmod>2021-03-11T22:27:21+01:00</lastmod>
   </url>
   
@@ -34,11 +59,6 @@
   
   <url>
     <loc>https://flaviomorelli.com/tags/r/</loc>
-    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/tags/</loc>
     <lastmod>2021-03-11T22:27:21+01:00</lastmod>
   </url>
   
@@ -64,16 +84,6 @@
   
   <url>
     <loc>https://flaviomorelli.com/post/5-book-recommendations-summer-2020/</loc>
-    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/tags/books/</loc>
-    <lastmod>2020-09-18T10:55:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/tags/recommendation/</loc>
     <lastmod>2020-09-18T10:55:01+02:00</lastmod>
   </url>
   

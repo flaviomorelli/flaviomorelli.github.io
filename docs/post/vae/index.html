@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Flavio Morelli | Beyond the Gaussian Variational Encoder </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Data Scientist | M. Sc. Statistics @ HU Berlin | Machine Learning Intern @ Bayer">
+    
+    <link rel="stylesheet" href="https://flaviomorelli.com/css/style.min.e32550f4fc7d834a8b0ac0e965927404738b470c28c2c4c35102bce0126ead50.css" integrity="sha256-4yVQ9Px9g0qLCsDpZZJ0BHOLRwwowsTDUQK84BJurVA=" crossorigin="anonymous" type="text/css"><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://flaviomorelli.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://flaviomorelli.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://flaviomorelli.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://flaviomorelli.com/favicon-16x16.png">
+    <link rel="canonical" href="https://flaviomorelli.com/post/vae/">
+    
+    
+    <script type="text/javascript" src="https://flaviomorelli.com/js/anatole-header.min.7e2fc0724240b28c6e214687e73a4a6eb6c196bbace546b9dc86e94cca120b5c.js" integrity="sha256-fi/AckJAsoxuIUaH5zpKbrbBlrus5Ua53IbpTMoSC1w=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Beyond the Gaussian Variational Encoder"/>
+<meta name="twitter:description" content="When using the reparametrization trick in variational encoders (VAE), it is common to assume that both the encoder and the decoder follow a Gaussian distribution."/>
+
+</head>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://flaviomorelli.com/images/flavio_rest.png" alt="profile picture">
+            <h3 title=""><a href="/">Flavio Morelli</a></h3>
+            <div class="description">
+                <p>Data Scientist | M. Sc. Statistics @ HU Berlin | Machine Learning Intern @ Bayer</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://de.linkedin.com/in/mexiamorelli" rel="me" aria-label="Linkedin">
+                    <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/mexiamorelli" rel="me" aria-label="twitter">
+                    <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/flaviomorelli/" rel="me" aria-label="GitHub">
+                    <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:info@flaviomorelli.com" rel="me" aria-label="e-mail">
+                    <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Flavio Morelli 2022 </div>
+    </div>
+</div>
+<div class="main">
+            <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+        
+        <li><a  href="/"  title="">Home</a></li>
+        
+        
+        <li><a  href="/post/"  title="">Posts</a></li>
+        
+        
+        <li><a  href="/talks/"  title="">Talks</a></li>
+        
+        
+        <li><a  href="/about/"  title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Beyond the Gaussian Variational Encoder
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i>
+          <span class="date">Wed, Oct 20, 2021</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">6-minute read</span>
+        </div>
+        
+        </div>
+
+    <p>When using the reparametrization trick in variational encoders (VAE), it is common to assume that both the encoder and the decoder follow a Gaussian distribution. This is mostly due to practical reasons:  most libraries provide an implementation of the Gaussian distribution and it is relatively easy to get the analytical form of the Kullback-Leibler divergence.</p>
+<p>However, the Gaussian variational approximation is just a special case of the original Kingma &amp; Welling paper from 2014. Kingma &amp; Welling (2014) outline three basic approaches for the reparametrization trick:</p>
+<ol>
+<li><strong>Location-scale distributions:</strong> this includes distributions of the form \(Y = \mu + \sigma \cdot \varepsilon \), where \(\mu\) is the location parameter, \(\sigma\) is the scale parameter and \(\varepsilon\) is a sample of the standard distribution. In this case, the standard distribution has \(\mu = 0\) and \(\sigma = 1\) and is therefore parameter-free. This includes distributions such as the Laplace, Student&rsquo;s-\(t\), Logistic, Uniform and Gaussian.</li>
+<li><strong>Distributions with tractable quantile function:</strong> if the quantile function (also called inverse CDF) is tractable, we can sample \(u\) uniformly from the unit interval (i.e., \(u \sim \mathcal U(0, 1)\), which is not necessarily restricted to the unidimensional case). Then \(X = CDF^{-1}(u)\) is the sample from the desired distribution. Some distributions in this category are Exponential, Cauchy, Logistic, Weibull, Gumbel.</li>
+<li><strong>Composition</strong>: some distribution are generated by transforming other distributions. A classical example is the Log-Normal, which is generated by exponentiating a Gaussian random variable (category 1). Another example is the Gamma distribution, which can be obtained by adding Exponential random variables (category 2).</li>
+</ol>
+<p>By using a standard distribution (category 1) or sampling from the unit interval (category 2), the random part of our model is parameter free and there is nothing in our neural network blocking the backpropagation step. This reasoning also applies to category 3, because it is based on categories 1 and 2.</p>
+<p>However, the reparametrization trick does not solve all of our problems. We still need the KL-divergence between the distributions that we are using. As calculating the analytical KL-divergence is often intractable, it is important to restrict our choices to distributions for which we already have the KL-divergence. Wikipedia provides the analytical KL-divergence for some distributions and <a href="https://www.mast.queensu.ca/~communications/Papers/gil-msc11.pdf">this dissertation</a>  contains the KL-divergence for many common distributions.</p>
+<h2 id="a-simple-gaussian-vae">A simple Gaussian VAE</h2>
+<p>Following Kingma &amp; Welling (2014), the aim is to maximize the ELBO</p>
+<p>\(\mathcal L  (\theta, \phi; x^{(i)}) = -D_{KL}(q_{\phi}(z|x^{(i)})||p_{\theta}(z)) + \log p_\theta (x^{(i)}|z^{(i)}) \),</p>
+<p>where \(q_{\phi}(z|x^{(i)})\) is the encoder parametrized by the vector \(\phi\), \(p_\theta(z)\) is the prior over the embeddings \(z\), \(p_\theta (x^{(i)}|z^{(i)})\) is the likelihood of the decoder for observation \(x^{(i)}\) given the embedding and \(D_{KL}\) is the Kullback-Leibler divergence. \(z^{(i)}\) is defined as \(g_\phi(\varepsilon^{(i)}, x^{(i)})\), where \(\varepsilon\) follows some distribution \(p(\varepsilon)\). The term \( \log p_\theta (x^{(i)}|z^{(i)}) \) is also called _reconstruction error_. Note that the original paper also includes a dimension \(L\), which indicates the number of samples generated per observation. This is ignored for simplicity.</p>
+<p>For a Gaussian VAE, we follow the first alternative of the reparametrization trick. We define \(z = \mu + \sigma \cdot \varepsilon\), with \(\varepsilon \sim \mathcal N (0, I_k)\). \(I_k\) is the identity matrix where \(k\) is the size of the embedding \(z\). The parameters \(\mu\) and \(\sigma\) are learned from fully connected \(k\)-dimensional layers. The model is defined as follows:</p>
+<p>\( H_1 = h(W_1X), ~~ H_2 = h(W_2H_1),\)</p>
+<p>\( \mu = h(W_3H_2), ~~ \log \sigma = h(W_4H_2),\)</p>
+<p>\( z = \mu + \sigma \cdot \varepsilon, ~~ \varepsilon \sim \mathcal N (0, I_k) \)</p>
+<p>\( H_3 = h(W_5z), ~~ Y = h(W_6H_3)\)</p>
+<p>Here, \(h\) denotes an activation function such as ReLU. Moreover, the network can be made deeper or flatter, if necessary. Assuming the parameter-free prior \(p_\theta(z) = \mathcal N (0, 1)\), then the Kullback-Leibler \(D_{KL}(\mathcal N(\mu, \sigma) ||\mathcal N(0, 1)) \) has a very simple form which can be found <a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Examples">in this Wikipedia article</a>. The reconstruction error (which is also the likelihood of the decoder) is not used if we just want to get the embeddings \(z\), but is still needed for training. A simple specification would be \(x^{(i)}|z^{(i)} \sim \mathcal N (y^{(i)}, \tilde \sigma)\), where \(y^{(i)}\) is the prediction from the decoder for observation \(i\) and \(\tilde \sigma \) is and additional learnable parameter. However, we could choose a different and more complex distribution for the decoder.</p>
+<p>An implementation with Pytorch Lightning can be written as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> torch
+<span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+<span style="color:#f92672">import</span> pytorch_lightning <span style="color:#f92672">as</span> pl
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GaussianVAE</span>(pl<span style="color:#f92672">.</span>LightningModule):
+    <span style="color:#66d9ef">def</span> __init__(self, size, latent<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>):
+        super()<span style="color:#f92672">.</span>__init__()
+        self<span style="color:#f92672">.</span>encoder <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(
+            nn<span style="color:#f92672">.</span>Linear(size, <span style="color:#ae81ff">64</span>), nn<span style="color:#f92672">.</span>ReLU(), nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">64</span>, latent)
+        )
+        self<span style="color:#f92672">.</span>decoder <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(
+            nn<span style="color:#f92672">.</span>Linear(latent, <span style="color:#ae81ff">64</span>), nn<span style="color:#f92672">.</span>ReLU(), nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">64</span>, size)
+        )
+        self<span style="color:#f92672">.</span>mu <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(latent, latent)
+        self<span style="color:#f92672">.</span>log_sigma <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(latent, latent)
+
+        <span style="color:#75715e"># For reconstruction loss</span>
+        self<span style="color:#f92672">.</span>log_scale <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Parameter(torch<span style="color:#f92672">.</span>Tensor([<span style="color:#ae81ff">0.0</span>]))
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+        h <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encoder(x)
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>reparametrize(self<span style="color:#f92672">.</span>mu(h), self<span style="color:#f92672">.</span>log_sigma(h))
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reparametrize</span>(self, mu, log_scale):
+        scale <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>exp(log_scale)
+        epsilon <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>randn_like(scale)
+        <span style="color:#66d9ef">return</span> mu <span style="color:#f92672">+</span> scale <span style="color:#f92672">*</span> epsilon
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">kl</span>(self, mu, log_sigma):
+        var <span style="color:#f92672">=</span> log_sigma<span style="color:#f92672">.</span>exp() <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">return</span> torch<span style="color:#f92672">.</span>mean(
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span> <span style="color:#f92672">*</span> torch<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> var<span style="color:#f92672">.</span>log() <span style="color:#f92672">-</span> mu<span style="color:#f92672">.</span>pow(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">-</span> var, dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>),
+            dim<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,
+        )
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">training_step</span>(self, batch, batch_idx):
+        x, _ <span style="color:#f92672">=</span> batch
+        x <span style="color:#f92672">=</span> x<span style="color:#f92672">.</span>view(x<span style="color:#f92672">.</span>size(<span style="color:#ae81ff">0</span>), <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>float() <span style="color:#75715e"># flatten input</span>
+        
+        <span style="color:#75715e"># hidden representation</span>
+        h <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encoder(x) 
+        
+        <span style="color:#75715e"># parameters for encoder distribution </span>
+        mu <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>mu(h)
+        log_scale <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>log_sigma(h)
+        
+        <span style="color:#75715e"># variational embedding</span>
+        z <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>reparametrize(mu, log_scale) 
+        
+        <span style="color:#75715e"># decoded embedding</span>
+        y_hat <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>decoder(z)
+
+        <span style="color:#75715e"># decoder distribution with global scale parameter</span>
+        decoder_distr <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>distributions<span style="color:#f92672">.</span>Normal(y_hat, self<span style="color:#f92672">.</span>log_scale<span style="color:#f92672">.</span>exp())
+        
+        <span style="color:#75715e"># calculate ELBO</span>
+        reconstruction_loss <span style="color:#f92672">=</span> decoder_distr<span style="color:#f92672">.</span>log_prob(x)<span style="color:#f92672">.</span>sum()
+        kl <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>kl(mu, log_scale)
+        
+        <span style="color:#75715e"># flipped signed to minimize negative ELBO</span>
+        neg_elbo <span style="color:#f92672">=</span> kl <span style="color:#f92672">-</span> reconstruction_loss
+        <span style="color:#75715e"># Log to TensorBoard</span>
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#34;elbo&#34;</span>, neg_elbo)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#34;kl&#34;</span>, kl)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#34;reconstruction&#34;</span>, reconstruction_loss)
+        self<span style="color:#f92672">.</span>log(<span style="color:#e6db74">&#34;Global sd&#34;</span>, self<span style="color:#f92672">.</span>log_scale<span style="color:#f92672">.</span>exp())
+        <span style="color:#66d9ef">return</span> neg_elbo
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">configure_optimizers</span>(self):
+        optimizer <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>Adam(self<span style="color:#f92672">.</span>parameters(), lr<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-3</span>)
+        scheduler <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>optim<span style="color:#f92672">.</span>lr_scheduler<span style="color:#f92672">.</span>ReduceLROnPlateau(optimizer)
+        <span style="color:#66d9ef">return</span> {
+            <span style="color:#e6db74">&#34;optimizer&#34;</span>: optimizer,
+            <span style="color:#e6db74">&#34;lr_scheduler&#34;</span>: scheduler,
+            <span style="color:#e6db74">&#34;monitor&#34;</span>: <span style="color:#e6db74">&#34;elbo&#34;</span>,
+        }
+</code></pre></div><p>We train the decoder with the MNIST data set, which has images of size 28 \(\cdot\) 28.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
+sys<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;.&#34;</span>)
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> torch
+<span style="color:#f92672">from</span> torchvision <span style="color:#f92672">import</span> transforms
+<span style="color:#f92672">from</span> torchvision.datasets <span style="color:#f92672">import</span> MNIST
+<span style="color:#f92672">from</span> torch.utils.data <span style="color:#f92672">import</span> DataLoader, random_split
+<span style="color:#f92672">import</span> pytorch_lightning <span style="color:#f92672">as</span> pl
+
+dataset <span style="color:#f92672">=</span> MNIST(os<span style="color:#f92672">.</span>getcwd(), download<span style="color:#f92672">=</span>True, transform<span style="color:#f92672">=</span>transforms<span style="color:#f92672">.</span>ToTensor())
+train_loader <span style="color:#f92672">=</span> DataLoader(random_split(dataset, [<span style="color:#ae81ff">2000</span>, <span style="color:#ae81ff">58000</span>])[<span style="color:#ae81ff">0</span>])
+
+vae <span style="color:#f92672">=</span> VAE(<span style="color:#ae81ff">28</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">28</span>)
+trainer <span style="color:#f92672">=</span> pl<span style="color:#f92672">.</span>Trainer(max_epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</code></pre></div><h2 id="defining-a-gumbel-vae">Defining a Gumbel VAE</h2>
+<p>Now that we have defined a simple Gaussian VAE, we will use the <a href="https://en.wikipedia.org/wiki/Gumbel_distribution">Gumbel distribution</a> as a variational approximation. The Gumbel distribution is part of the second category of distributions, for which we use the quantile function in the reparametrization trick. This distribution is usually used to model the maximum of a number of samples. Like the normal distribution it has a location parameter \(\mu\) and a positive scale parameter \(\beta\). However, it has a constant positive skewness approximately equal to 1.14. The support of the distribution is \(\R\). Fortunately, the Gumbel distribution is already implemented in Pytorch. The only thing that is missing is the KL divergence between two Gumbel distributions, which can be taken from the dissertation that was linked above:</p>
+<p>\(D_{KL}(Gumbel(\mu_q, \beta_q)||Gumbel(\mu_p, \beta_p)) = \log \frac{\beta_p}{\beta_q} + \gamma (\frac{\beta_q}{\beta_p} - 1) + \exp(\frac{\mu_p - \mu_q}{\beta_p})\Gamma (\frac{\beta_q}{\beta_p} + 1) - 1 \),</p>
+<p>where \(\Gamma\) is the gamma function and \(\gamma\) is the Euler-Mascheroni constant (\(\approx 0.5772\)).</p>
+<p>Following the reparametrization trick we first sample \(u\) from \(U(0, I)\) and then use the quantile function of \(Gumbel(\mu_q, \beta_q)\) to generate a sample from the variational encoder. \(\mu_q\) and \(\beta_q\) are estimated through two parallel fully connected layers of size equal to the latent dimension. We assume that the embedding \(z\) has a prior \(Gumbel(\mu_p, \beta_p)\) with \(\mu_p = 0 \) and \(\beta_p = 1\). Similar to the Gaussian VAE, we assume \(x^{(i)}|z^{(i)} \sim Gumbel (y^{(i)}, \tilde \beta)\), where \(y^{(i)}\) is the prediction from the decoder and \(\tilde \beta \) is and global learnable parameter.</p>
+<h2 id="visualizing-the-reconstruction">Visualizing the reconstruction</h2>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/&#43;DiW/UqRcLbRjq" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l&#43;B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd&#43;qj&#43;o24G5ZU2zJz" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script></body>
+
+</html>

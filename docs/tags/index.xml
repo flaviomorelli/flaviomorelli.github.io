@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Flavio Morelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Feb 2022 17:51:15 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 18:09:28 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>julia</title>
+      <link>https://flaviomorelli.com/tags/julia/</link>
+      <pubDate>Sun, 20 Feb 2022 18:09:28 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/tags/julia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://flaviomorelli.com/tags/programming/</link>
+      <pubDate>Sun, 20 Feb 2022 18:09:28 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://flaviomorelli.com/tags/python/</link>
+      <pubDate>Sun, 20 Feb 2022 18:09:28 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://flaviomorelli.com/tags/r/</link>
+      <pubDate>Sun, 20 Feb 2022 18:09:28 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/tags/r/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>books</title>
       <link>https://flaviomorelli.com/tags/books/</link>
@@ -31,42 +67,6 @@
       <pubDate>Sun, 13 Feb 2022 17:51:15 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/tags/recommendation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>julia</title>
-      <link>https://flaviomorelli.com/tags/julia/</link>
-      <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
-      
-      <guid>https://flaviomorelli.com/tags/julia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://flaviomorelli.com/tags/programming/</link>
-      <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
-      
-      <guid>https://flaviomorelli.com/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://flaviomorelli.com/tags/python/</link>
-      <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
-      
-      <guid>https://flaviomorelli.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://flaviomorelli.com/tags/r/</link>
-      <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
-      
-      <guid>https://flaviomorelli.com/tags/r/</guid>
       <description></description>
     </item>
     

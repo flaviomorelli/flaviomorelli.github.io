@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Flavio Morelli | Death by a thousand cuts: the future of machine learning programming </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Data Scientist | M. Sc. Statistics @ HU Berlin | Machine Learning Intern @ Bayer Pharmaceuticals">
+    
+    <link rel="stylesheet" href="https://flaviomorelli.com/css/style.min.e32550f4fc7d834a8b0ac0e965927404738b470c28c2c4c35102bce0126ead50.css" integrity="sha256-4yVQ9Px9g0qLCsDpZZJ0BHOLRwwowsTDUQK84BJurVA=" crossorigin="anonymous" type="text/css"><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://flaviomorelli.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://flaviomorelli.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://flaviomorelli.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://flaviomorelli.com/favicon-16x16.png">
+    <link rel="canonical" href="https://flaviomorelli.com/post/future/">
+    
+    
+    <script type="text/javascript" src="https://flaviomorelli.com/js/anatole-header.min.7e2fc0724240b28c6e214687e73a4a6eb6c196bbace546b9dc86e94cca120b5c.js" integrity="sha256-fi/AckJAsoxuIUaH5zpKbrbBlrus5Ua53IbpTMoSC1w=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Death by a thousand cuts: the future of machine learning programming"/>
+<meta name="twitter:description" content="In the world of statistics and machine learning, there are many different opinions on what the future holds for scientific programming – specifically, Python, R and Julia."/>
+
+</head>
+<body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://flaviomorelli.com/images/flavio_rest.png" alt="profile picture">
+            <h3 title=""><a href="/">Flavio Morelli</a></h3>
+            <div class="description">
+                <p>Data Scientist | M. Sc. Statistics @ HU Berlin | Machine Learning Intern @ Bayer Pharmaceuticals</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://de.linkedin.com/in/mexiamorelli" rel="me" aria-label="Linkedin">
+                    <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.twitter.com/mexiamorelli" rel="me" aria-label="twitter">
+                    <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/flaviomorelli/" rel="me" aria-label="GitHub">
+                    <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:info@flaviomorelli.com" rel="me" aria-label="e-mail">
+                    <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Flavio Morelli 2022 </div>
+    </div>
+</div>
+<div class="main">
+            <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+        
+        <li><a  href="/"  title="">Home</a></li>
+        
+        
+        <li><a  href="/post/"  title="">Posts</a></li>
+        
+        
+        <li><a  href="/talks/"  title="">Talks</a></li>
+        
+        
+        <li><a  href="/about/"  title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Death by a thousand cuts: the future of machine learning programming
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i>
+          <span class="date">Sun, Feb 20, 2022</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">8-minute read</span>
+        </div>
+        
+        </div>
+
+    <p>In the world of statistics and machine learning, there are many different opinions on what the future holds for scientific programming – specifically, Python, R and Julia. No one has a crystal ball, and any predictions have limitations. Nonetheless, this post includes some thoughts on how the tools might evolve in the next 5 to 10 years. <em>Note</em>: I like and have worked with all three languages, so no language-bashing here!</p>
+<p><strong>tl;dr</strong> : learn Python, give Julia a try, learn from the thoroughness of R documentation</p>
+<h1 id="python-the-incumbent">Python: the incumbent</h1>
+<p>No matter how you look at it, Python reigns supreme in machine learning. It is consistently at the top of program in multiple rankings and a quick search on LinkedIn or Indeed will reveal that it is a programming language with a very high number of job openings, around half of them in data science. Nowadays, people who want to get into machine learning usually learn Python first. The most popular deep learning frameworks such as Pytorch and Tensorflow are written in Python. Moreover, Python is a very mature language with a large ecosystem that goes way beyond machine learning: it includes libraries for web development, continuous integration, and pretty much anything else you would like to do. From the perspective of a company, it makes complete sense to use Python. It includes all the tools you can imagine to bring your pipeline to production, there are countless resources and questions asked on multiple forums and you will have few problems interfacing with many different services. After all, Python has become the glue language of many areas in programming (besides maybe mobile development).</p>
+<p>However, being a glue language has some serious drawbacks. Some people like to say that Python is the second-best language for everything, and machine learning is no exception. While Python itself is a very elegant and clean language, the same cannot be said of its libraries. Using Numpy, for example, is not particularly intuitive and you have to know your way around the subpackages to do anything that is non-trivial. Then you have also Scipy, which has a ton of Numpy functionality, but then some extra stuff. And then when you move to other frameworks like as Pytorch, you have to re-learn the interface of the library, even though do you might be doing the same straightforward linear algebra task.  If you have worked with other visualization libraries such as ggplot, you might find matplotlib’s API clunky and the results aren’t nearly as good out of the box even for more user-friendly libraries such as Seaborn. Then you have pandas with all its unexpected quirks. Finally, Python is mostly geared to computer scientist, so documentation of many popular packages does not seem to be as exhaustive or user-friendly as you expect from an R package.</p>
+<p>But the largest drawback of Python in my opinion, is that it is not useful without a C/C++ or Fortran backend. Many of the popular machine learning libraries are in fact a huge C++ codebase with a very thin Python interface. Few people have the expertise or time to fully understand this low-level code, never mind contributing to it. Besides, this system is very inefficient. For example, most deep learning frameworks implement their own auto differentiation functionality. So, you have multiple libraries that implement the exact same thing multiple times in C++. Those are amazing libraries, don’t get me wrong, but it seems to be lots of repeat it work that only a few selected people will ever contribute to and it is hard for other packages to re-use these lower-level features that is already implemented in another package.</p>
+<p>In summary, Python is an amazing language with a huge toolchain, but that adds quite a bit of overhead when doing scientific programming, as it was not specifically designed for it.</p>
+<h1 id="r-the-chameleon">R: the chameleon</h1>
+<p>Good old R. The most faithful companion of any statistician or bioinformatician. R is a language that is even older than Python (back then, it was called S). The language itself is a nightmare. There are lots of quirks that you wouldn’t see in a modern programming language: you have multiple types of objects and all sorts of weird shortcuts that make it easier to shoot yourself in the food. It is also not necessarily the fastest language, in some cases even being slower than Python. R is like a house that has been built bit by bit over multiple decades and at times it doesn&rsquo;t feel as though the single parts fit together.</p>
+<p>There is a big <em>but</em>. R has some of the most amazing libraries in data science, which is what I would call <em>modern R</em>. The <a href="https://www.tidyverse.org/">tidyverse</a> is a pleasure to work with. ggplot is intuitive and produces beautiful graphs with little code, dplyr has all sorts of neat details that make your life easier. The Bayesian framework Stan and ecosystem are in principle language-agnostic, but R offers the best experience. Moreover, R was made with statistics in mind, so you never get this awkward feeling that you sometimes get with Python. If you don’t want to write your own package or put your code into production, then modern R provides a great user experience.</p>
+<p>One of the main successes of our R is the quality of its documentation. You can go to CRAN and there you will find a large PDF document for most packages that provides not only information how about the API, but also a ton of examples and background information that helps you understand the implemented methods much better. Most packages also have a very consistent API, so for example you will find a <code>predict</code> or <code>summary</code> function in pretty much any package. The <code>print</code> statements are usually will format it and give you a lot of extra information that you wouldn’t usually get in a Python library.</p>
+<p>In summary, R is a great choice if you’re doing statistics or generic machine learning. It may not be the best option for deep learning or text processing. Here, Python has a more mature ecosystem. It shares with Python its reliance on a huge C/C++/Fortran backend. The user experience is great, and you can learn a lot from the documentation. The developer experience is a bit of a mixed bag for people with a more traditional software development background, but there have been some improvements more recently (e.g., the <a href="https://r-pkgs.org/"><em>R Packages</em></a> book). Moreover, it must not be forgotten that R was one of the first programming languages to offer a free alternative to very expensive licensed products by SAS, Stata, or SPSS and this is something to be thankful for.</p>
+<h1 id="julia-the-challenger">Julia: the challenger</h1>
+<p>Julia is the new kid on the block. If do you have a more mathematical background, it is difficult not to get excited by Julia. You can write code that is virtually the same as Latex notation. This makes the code more compact, more readable, and it helps you understand the details of a method. Julia does not vectorize by default. This might be a weird at the beginning if you are used to Python or R, but with time you begin to appreciate all the subtle ways you might shoot yourself in the foot in languages that use broadcasting silently. Moreover, it is liberating to write for-loops that are fast and efficient, instead of doing syntactic contortions to vectorize your code. And yes, the hype is true, Julia is extremely fast.</p>
+<p>A major advantage of Julia is that most of its libraries are written in Julia itself. I think this is a game changer, because it allows you to write libraries that are very good at one thing that can be used in multiple packages. This solves one of the main problems in Python and R: that many libraries re-implement the same functionality over and over again in a low-level language such as C++. This allows the community to be more involved in package development end it also democratizes access to certain types of functionality that would not be available otherwise.</p>
+<p>Many scientists that I know get very excited when they first work with Julia. However, there is still a risk that Julia will remain language that’s mainly used in academia. In spite of its many shortcomings, Python gets the job done and it is embedded in a mature environment that enables easy deployment. Julia is a relatively new language and most companies will not switch from Python just because the code is more beautiful or because it is faster. Most of Julia’s added value is in the modeling side. However, the model is just a tiny part of any machine learning pipeline. Moreover, the documentation of many packages is still not as comprehensive as in R and some of the error messages might be quite cryptic to decipher.</p>
+<p>Julia is a fast language that is intuitive to use if you have a theoretical background. It is unclear whether more companies will adopt it - there are not many job openings specifically for Julia. Most of its potential lies in the scientific community, but it remains to be seen whether it can displace R as a user-friendly language, or if it remains a niche language for researchers that want to develop new methods on top of other libraries.</p>
+<h1 id="summary">Summary</h1>
+<p>Python is far from perfect, but it will remain the de facto standard in machine learning for many years to come. However, if Julia manages to develop a more mature tooling for production, it might be a death by a thousand cuts for Python. I believe Julia has the potential to overtake Python, due to its speed and simple syntax. R has a very clear niche in statistics, but Julia might start filling this space if the community is able to improve the quality of the documentation and if there are good alternatives to amazing packages such as tidyverse or tidymodels. Nevertheless, these changes are likely to take a very long time, just as it took Python decades to become the number one language in machine learning programming.</p>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/julia/">julia</a><a class="tag" href="/tags/python/">python</a><a class="tag" href="/tags/r/">R</a><a class="tag" href="/tags/programming/">programming</a></span>
+
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://flaviomorelli.com/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></body>
+
+</html>

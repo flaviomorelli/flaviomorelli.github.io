@@ -6,7 +6,16 @@
     <description>Recent content in python on Flavio Morelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Mar 2021 22:27:21 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 18:09:28 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Death by a thousand cuts: the future of machine learning programming</title>
+      <link>https://flaviomorelli.com/post/future/</link>
+      <pubDate>Sun, 20 Feb 2022 18:09:28 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/future/</guid>
+      <description>In the world of statistics and machine learning, there are many different opinions on what the future holds for scientific programming – specifically, Python, R and Julia.</description>
+    </item>
+    
     <item>
       <title>Membership tests in Julia, R and Python</title>
       <link>https://flaviomorelli.com/post/membership_test/</link>

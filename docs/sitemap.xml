@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://flaviomorelli.com/post/future/</loc>
+    <lastmod>2022-02-20T18:09:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/</loc>
+    <lastmod>2022-02-20T18:09:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/julia/</loc>
+    <lastmod>2022-02-20T18:09:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/post/</loc>
+    <lastmod>2022-02-20T18:09:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/programming/</loc>
+    <lastmod>2022-02-20T18:09:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/python/</loc>
+    <lastmod>2022-02-20T18:09:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/r/</loc>
+    <lastmod>2022-02-20T18:09:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flaviomorelli.com/tags/</loc>
+    <lastmod>2022-02-20T18:09:28+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://flaviomorelli.com/post/hidden/</loc>
     <lastmod>2022-02-13T17:51:15+01:00</lastmod>
   </url>
@@ -18,47 +58,12 @@
   </url>
   
   <url>
-    <loc>https://flaviomorelli.com/</loc>
-    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/post/</loc>
-    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://flaviomorelli.com/tags/recommendation/</loc>
     <lastmod>2022-02-13T17:51:15+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://flaviomorelli.com/tags/</loc>
-    <lastmod>2022-02-13T17:51:15+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/tags/julia/</loc>
-    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://flaviomorelli.com/post/membership_test/</loc>
-    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/tags/programming/</loc>
-    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/tags/python/</loc>
-    <lastmod>2021-03-11T22:27:21+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flaviomorelli.com/tags/r/</loc>
     <lastmod>2021-03-11T22:27:21+01:00</lastmod>
   </url>
   

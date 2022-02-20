@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Flavio Morelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Feb 2022 17:51:15 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 18:09:28 +0100</lastBuildDate><atom:link href="https://flaviomorelli.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Death by a thousand cuts: the future of machine learning programming</title>
+      <link>https://flaviomorelli.com/post/future/</link>
+      <pubDate>Sun, 20 Feb 2022 18:09:28 +0100</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/future/</guid>
+      <description>In the world of statistics and machine learning, there are many different opinions on what the future holds for scientific programming – specifically, Python, R and Julia.</description>
+    </item>
+    
     <item>
       <title>Book Review: Hidden Truths by David Fubini</title>
       <link>https://flaviomorelli.com/post/hidden/</link>

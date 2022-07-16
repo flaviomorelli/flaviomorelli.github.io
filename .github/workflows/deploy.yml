@@ -17,13 +17,14 @@ jobs:
                 
           - name: print list
             run: echo $(ls)
-                
-          - name: Deploy file
-            uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-            with:
-                username: ${{ secrets.FTP_USER}}
-                server: ${{ secrets.FTP_SERVER }}
-                password: ${{ secrets.FTP_PASSWORD }}
-                local_path: './'
-                remote_path: './'
-                sftp_only: true
+           
+          - name: connect to sftp
+#           - name: Deploy file
+#             uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+#             with:
+#                 username: ${{ secrets.FTP_USER}}
+#                 server: ${{ secrets.FTP_SERVER }}
+#                 password: ${{ secrets.FTP_PASSWORD }}
+#                 local_path: '.'
+#                 remote_path: '.'
+#                 sftp_only: true

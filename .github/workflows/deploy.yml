@@ -7,12 +7,17 @@ jobs:
       steps:
           - name: Checkout
             uses: actions/checkout@v2
+            
+          - name: Change directory
+            run: |
+                cd docs
+                
           - name: Deploy file
             uses: wlixcc/SFTP-Deploy-Action@v1.2.4
             with:
                 username: ${{ secrets.FTP_USER}}
                 server: ${{ secrets.FTP_SERVER }}
                 password: ${{ secrets.FTP_PASSWORD }}
-                local_path: './docs'
+                local_path: './*'
                 remote_path: './'
                 sftp_only: true

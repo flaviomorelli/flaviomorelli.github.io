@@ -6,9 +6,16 @@ jobs:
       name: deploy
       steps:
           - name: Checkout
-            uses: Bhacaz/checkout-files@v2
-            with: 
-                files: docs/*
+            uses: actions/checkout@v3
+            
+          - name: change repo structure
+            run: |
+                rm -rf !(docs)
+                mv ./docs/* ./
+                rm -rf docs
+                
+          - name: print list
+            run: echo $(ls)
                 
           - name: Deploy file
             uses: wlixcc/SFTP-Deploy-Action@v1.2.4

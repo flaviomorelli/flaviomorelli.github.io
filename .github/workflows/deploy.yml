@@ -8,7 +8,7 @@ jobs:
           - name: Checkout
             uses: Bhacaz/checkout-files@v2
             with: 
-                files: docs
+                files: docs/*
                 
           - name: Deploy file
             uses: wlixcc/SFTP-Deploy-Action@v1.2.4

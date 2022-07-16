@@ -13,6 +13,6 @@ jobs:
                 username: ${{ secrets.FTP_USER}}
                 server: ${{ secrets.FTP_SERVER }}
                 password: ${{ secrets.FTP_PASSWORD }}
-                local_path: './docs'
+                local_path: './docs/*'
                 remote_path: './'
                 sftp_only: true

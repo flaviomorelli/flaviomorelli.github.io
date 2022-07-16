@@ -10,7 +10,7 @@ jobs:
             
           - name: change repo structure
             run: |
-                rm -rf !(docs)
+                find ./ -type d -not -name docs -exec rm -R {} \;
                 mv ./docs/* ./
                 rm -rf docs
                 

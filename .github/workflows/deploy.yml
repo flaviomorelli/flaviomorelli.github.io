@@ -14,6 +14,7 @@ jobs:
                 find ./ -maxdepth 1 -type f -delete
                 mv ./docs/* ./
                 rm -rf docs
+                rm -rf fontawesome # Fonts are read-only! sync manually!
                 
           - name: print list
             run: echo $(ls)

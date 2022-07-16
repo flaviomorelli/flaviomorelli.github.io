@@ -27,3 +27,4 @@ jobs:
                 local_path: './'
                 remote_path: './'
                 sftp_only: true
+                delete_remote_files: true

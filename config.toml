@@ -66,7 +66,13 @@ url = "mailto:info@flaviomorelli.com"
   url = "/talks/"
 
   [[menu.main]]
-  name = "About"
+  name = "Consulting"
   weight = 400
+  identifier = "consulting"
+  url = "/consulting/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 500
   identifier = "about"
   url = "/about/"

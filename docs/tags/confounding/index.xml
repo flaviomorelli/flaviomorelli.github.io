@@ -13,7 +13,9 @@
       <pubDate>Thu, 25 Feb 2021 16:58:18 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/post/bias/</guid>
-      <description>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy.</description>
+      
+        <description>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy.</description>
+      
     </item>
     
   </channel>

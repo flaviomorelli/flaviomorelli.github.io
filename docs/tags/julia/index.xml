@@ -13,7 +13,9 @@
       <pubDate>Sun, 20 Feb 2022 18:09:28 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/post/future/</guid>
-      <description>In the world of statistics and machine learning, there are many different opinions on what the future holds for scientific programming – specifically, Python, R and Julia.</description>
+      
+        <description>In the world of statistics and machine learning, there are many different opinions on what the future holds for scientific programming – specifically, Python, R and Julia.</description>
+      
     </item>
     
     <item>
@@ -22,7 +24,9 @@
       <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/post/membership_test/</guid>
-      <description>Membership tests – checking whether an element is in a collection – is a common operation in statistical programming.</description>
+      
+        <description>Membership tests – checking whether an element is in a collection – is a common operation in statistical programming.</description>
+      
     </item>
     
   </channel>

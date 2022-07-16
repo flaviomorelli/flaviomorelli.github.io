@@ -12,10 +12,17 @@ Home = "home"
 
 Search = "true"
 
+[module]
+  # uncomment line below for temporary local development of module
+  # replacements = "github.com/lxndrblz/anatole -> ../../anatole"
+  [[module.imports]]
+    path = "github.com/lxndrblz/anatole"
+    disable = false
+
 [params]
 title = "Flavio Morelli"
 author = "Flavio Morelli"
-description = "Data Scientist | M. Sc. Statistics @ HU Berlin | Machine Learning Intern @ Bayer Pharmaceuticals"
+description = "Data Scientist | M. Sc. Statistics @ HU Berlin | Machine Learning Scientist @ Bayer Pharmaceuticals"
 profilePicture = "images/flavio_rest.png"
 
 [params.math]
@@ -24,22 +31,22 @@ use = "katex"  # options: "katex", "mathjax". default is "katex".
 
 ## Social links
 [[params.socialIcons]]
-icon = "fa-linkedin"
+icon = "fab fa-linkedin"
 title = "Linkedin"
 url = "https://de.linkedin.com/in/mexiamorelli"
 
 [[params.socialIcons]]
-icon = "fa-twitter"
+icon = "fab fa-twitter"
 title = "twitter"
 url = "https://www.twitter.com/mexiamorelli"
 
 [[params.socialIcons]]
-icon = "fa-github"
+icon = "fab fa-github"
 title = "GitHub"
 url = "https://github.com/flaviomorelli/"
 
 [[params.socialIcons]]
-icon = "fa-envelope"
+icon = "fas fa-envelope"
 title = "e-mail"
 url = "mailto:info@flaviomorelli.com"
 

@@ -13,7 +13,9 @@
       <pubDate>Thu, 26 May 2022 08:40:59 +0200</pubDate>
       
       <guid>https://flaviomorelli.com/consulting/</guid>
-      <description>I offer consulting services to (PhD-)students and scientific institutions with regards to statistical and programming questions.</description>
+      
+        <description>I offer consulting services to (PhD-)students and scientific institutions with regards to statistical and programming questions.</description>
+      
     </item>
     
     <item>
@@ -22,7 +24,9 @@
       <pubDate>Sun, 20 Feb 2022 18:09:28 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/post/future/</guid>
-      <description>In the world of statistics and machine learning, there are many different opinions on what the future holds for scientific programming – specifically, Python, R and Julia.</description>
+      
+        <description>In the world of statistics and machine learning, there are many different opinions on what the future holds for scientific programming – specifically, Python, R and Julia.</description>
+      
     </item>
     
     <item>
@@ -31,7 +35,9 @@
       <pubDate>Sun, 13 Feb 2022 17:51:15 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/post/hidden/</guid>
-      <description>For those of us who are not in business consulting, it is sometimes hard to truly understand what sets apart top strategy firms like McKinsey, BCG or Bain.</description>
+      
+        <description>For those of us who are not in business consulting, it is sometimes hard to truly understand what sets apart top strategy firms like McKinsey, BCG or Bain.</description>
+      
     </item>
     
     <item>
@@ -40,7 +46,9 @@
       <pubDate>Thu, 11 Mar 2021 22:27:21 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/post/membership_test/</guid>
-      <description>Membership tests – checking whether an element is in a collection – is a common operation in statistical programming.</description>
+      
+        <description>Membership tests – checking whether an element is in a collection – is a common operation in statistical programming.</description>
+      
     </item>
     
     <item>
@@ -49,7 +57,9 @@
       <pubDate>Thu, 25 Feb 2021 16:58:18 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/post/bias/</guid>
-      <description>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy.</description>
+      
+        <description>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy.</description>
+      
     </item>
     
     <item>
@@ -58,7 +68,9 @@
       <pubDate>Fri, 18 Sep 2020 10:55:01 +0200</pubDate>
       
       <guid>https://flaviomorelli.com/post/5-book-recommendations-summer-2020/</guid>
-      <description>Summer is almost over, so I thought I would share some books I have learned something from during the last couple of months.</description>
+      
+        <description>Summer is almost over, so I thought I would share some books I have learned something from during the last couple of months.</description>
+      
     </item>
     
     <item>
@@ -67,7 +79,9 @@
       <pubDate>Mon, 14 Sep 2020 22:39:28 +0200</pubDate>
       
       <guid>https://flaviomorelli.com/about/</guid>
-      <description>Hi! My name is Flavio. I am a statistician, currently enrolled as a Master&amp;rsquo;s student at the Humboldt University of Berlin.</description>
+      
+        <description>Hi! My name is Flavio. I am a statistician, currently enrolled as a Master&amp;rsquo;s student at the Humboldt University of Berlin.</description>
+      
     </item>
     
     <item>
@@ -76,7 +90,9 @@
       <pubDate>Sat, 28 Mar 2020 13:59:02 +0100</pubDate>
       
       <guid>https://flaviomorelli.com/talks/</guid>
-      <description>2022 Berlin Time Series Analysis Meetup – An introduction to temporal GNNs</description>
+      
+        <description>2022 Berlin Time Series Analysis Meetup – An introduction to temporal GNNs</description>
+      
     </item>
     
   </channel>

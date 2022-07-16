@@ -1,18 +1,18 @@
 on: push
-name: Deploy website on push
-jobs:
-  web-deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get latest code
-        uses: actions/checkout@v2
 
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./docs/
-          dry-run: true
+jobs:
+    deploy_job:
+      runs-on: ubuntu-latest
+      name: deploy
+      steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+          - name: Deploy file
+            uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+            with:
+                username: ${{ secrets.FTP_USER}}
+                server: ${{ secrets.FTP_SERVER }}
+                password: ${{ secrets.FTP_PASSWORD }}
+                local_path: './docs'
+                remote_path: './'
+                sftp_only: true

@@ -22,11 +22,11 @@ Search = "true"
 [params]
 title = "Flavio Morelli"
 author = "Flavio Morelli"
-description =  "Machine Learning Scientist @ Bayer Pharmaceuticals | M. Sc. Statistics @ HU Berlin"
+description =  "Machine Learning Scientist @ Bayer AG | M. Sc. Statistics @ HU Berlin"
 profilePicture = "images/flavio_rest.png"
 
 [params.math]
-enable = true  # options: true, false. Enable math support globally, default: false. 
+enable = true  # options: true, false. Enable math support globally, default: false.
 use = "katex"  # options: "katex", "mathjax". default is "katex".
 
 ## Social links

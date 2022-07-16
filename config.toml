@@ -22,7 +22,7 @@ Search = "true"
 [params]
 title = "Flavio Morelli"
 author = "Flavio Morelli"
-description = "Data Scientist | M. Sc. Statistics @ HU Berlin | Machine Learning Scientist @ Bayer Pharmaceuticals"
+description =  "Machine Learning Scientist @ Bayer Pharmaceuticals | M. Sc. Statistics @ HU Berlin"
 profilePicture = "images/flavio_rest.png"
 
 [params.math]

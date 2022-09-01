@@ -19,7 +19,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.80.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Flavio Morelli" />
   <meta
     name="description"
@@ -35,8 +35,8 @@
     
     <link
       rel="stylesheet"
-      href="/scss/main.min.f56f0970bc00d4c7ffdb126b93d067aa889f87a5604f2b2a77770478f3966a03.css"
-      integrity="sha256-9W8JcLwA1Mf/2xJrk9Bnqoifh6VgTysqd3cEePOWagM="
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
       crossorigin="anonymous"
       type="text/css"
     />
@@ -46,8 +46,8 @@
   
   <link
     rel="stylesheet"
-    href="/css/markupHighlight.min.793b323d7f2d9fbfd0b93f4d593fb5ad77b918716ed33eddea403fa87f770403.css"
-    integrity="sha256-eTsyPX8tn7/QuT9NWT&#43;1rXe5GHFu0z7d6kA/qH93BAM="
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
     crossorigin="anonymous"
     type="text/css"
   />
@@ -90,8 +90,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.5c846cefa5ed21cceee981c70901aaf21b17b4e0b05bd777af840780918abea9.js"
-    integrity="sha256-XIRs76XtIczu6YHHCQGq8hsXtOCwW9d3r4QHgJGKvqk="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -100,8 +100,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.245da778410d349aba672975fe9ff04e24e608155cc9102b5c1c70554c1539c0.js"
-      integrity="sha256-JF2neEENNJq6Zyl1/p/wTiTmCBVcyRArXBxwVUwVOcA="
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
       crossorigin="anonymous"
     ></script>
 
@@ -121,9 +121,10 @@
   <meta property="og:title" content="The problem with interpreting biased coefficients" />
 <meta property="og:description" content="One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://flaviomorelli.com/post/bias/" />
+<meta property="og:url" content="https://flaviomorelli.com/post/bias/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-02-25T16:58:18+01:00" />
 <meta property="article:modified_time" content="2021-02-25T16:58:18+01:00" /><meta property="og:site_name" content="Flavio Morelli" />
+
 
 
 
@@ -325,8 +326,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
-    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    src="/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -481,7 +482,7 @@
           </li>
         </ul>
 
-      <p>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy. But coefficient interpretation can also lead to some subtle pitfalls. Suppose a regression is given by \(y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \varepsilon\). If we increase \(x_1\) by one unit and at the same time keep \(x_2\) constant (the so called <em>ceteris paribus</em> assumption), then \(y\) would change by the amount \(\beta_1\). In other words, \(\beta_1\) is the effect of \(x_1\) after controlling for \(x_2\). However, there are some problems with this approach. First, we assume that there is a &lsquo;true&rsquo; parameter that we try to estimate and an estimate can be biased. While the model might create the <strong>illusion</strong> that it is taking care of the problematic bits, it might actually make matters worse. Second, it is not clear what <em>kind</em> of effect we are are trying to approximate with our estimate. <em>Effect</em> is a very general and unprecise word.  In the end, it all depends on what the model is supposed to deliver: a good <em>prediction</em> or an explanation of <em>relations</em> between variables. In this post, I&rsquo;ll do the following</p>
+      <p>One of the first things people learn about regression analysis is how to interpret coefficients and it is seemingly easy. But coefficient interpretation can also lead to some subtle pitfalls. Suppose a regression is given by \(y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \varepsilon\). If we increase \(x_1\) by one unit and at the same time keep \(x_2\) constant (the so called <em>ceteris paribus</em> assumption), then \(y\) would change by the amount \(\beta_1\). In other words, \(\beta_1\) is the effect of \(x_1\) after controlling for \(x_2\). However, there are some problems with this approach. First, we assume that there is a &rsquo;true&rsquo; parameter that we try to estimate and an estimate can be biased. While the model might create the <strong>illusion</strong> that it is taking care of the problematic bits, it might actually make matters worse. Second, it is not clear what <em>kind</em> of effect we are are trying to approximate with our estimate. <em>Effect</em> is a very general and unprecise word.  In the end, it all depends on what the model is supposed to deliver: a good <em>prediction</em> or an explanation of <em>relations</em> between variables. In this post, I&rsquo;ll do the following</p>
 <ol>
 <li>Revisit the statistical mantra <em>correlation is not causation</em></li>
 <li>Introduce a classical example of biased coefficients from the econometric literature</li>
@@ -495,13 +496,12 @@
 <p>When <strong>making predictions</strong>, we are interested in how good our prediction is and if any given variable in the regression is actually contributing to improve the prediction. Variables that do not have a good predictive power should be removed from the regression, as they will unnecessarily introduce more variance to the predictions. This can be done with the help of cross-validation, as well as information criteria such as the AIC or the BIC. However, as long as the prediction is good, it is <em>not so important if the coefficients are biased</em>. In fact, models with biased coefficients can outperform causal models.</p>
 <h2 id="example-education-and-income">Example: education and income</h2>
 <p>Let&rsquo;s take a <strong>classical example</strong> from econometric literature – quantifying the effect of education on income. The government is interested in how much an extra year of education (financed by taxpayer&rsquo;s money) contributes to having a better income in the future. However, there is a potential confounder: intelligence. More intelligent people are likely to earn more due to their intelligence. At the same time, more intelligent people are likely to get more years of education. The problem here is that while it might be easy to get information on income and education through a survey, gathering information about intelligence might be more difficult (when was the last time a pollster asked you about your IQ?). The confounding is shown in the following graph: education (ED) has a direct effect on income ($), while intelligence (IQ) has a direct effect on both education and income</p>
-<figure class="center">
-    <img src="/images/posts/bias/iq.png"/> <figcaption>
+<figure class="center"><img src="/images/posts/bias/iq.png"/><figcaption>
             <h4>Income ($), education (ED) and IQ</h4>
         </figcaption>
 </figure>
 
-<p>The true relation between variables is \(income = \beta_0 + \beta_1 \cdot education + \beta_2 \cdot intelligence + \varepsilon\).  By leaving, \(intelligence\) out the estimate \(\hat\beta_1\) will be biased. But, <strong>does it matter?</strong> Well, if the aim is to spend taxpayers' money in the most effective way, you definitely want do close the backdoor path and get the causal effect. What if spending of education has no effect on income after all? With a biased model, it is not possible to tell. If you are just trying to predict income, then the only thing that really matters is whether the prediction is good. This can be measured for example by the root mean squared error applied to a left-out part of the data. The coefficient will tell you that the correlation between education and income is positive. And with inference that it is different from zero. However, the effect only measures correlation not controlling for intelligence, so there is no way to interpret the coefficient beyond its predictive power.</p>
+<p>The true relation between variables is \(income = \beta_0 + \beta_1 \cdot education + \beta_2 \cdot intelligence + \varepsilon\).  By leaving, \(intelligence\) out the estimate \(\hat\beta_1\) will be biased. But, <strong>does it matter?</strong> Well, if the aim is to spend taxpayers&rsquo; money in the most effective way, you definitely want do close the backdoor path and get the causal effect. What if spending of education has no effect on income after all? With a biased model, it is not possible to tell. If you are just trying to predict income, then the only thing that really matters is whether the prediction is good. This can be measured for example by the root mean squared error applied to a left-out part of the data. The coefficient will tell you that the correlation between education and income is positive. And with inference that it is different from zero. However, the effect only measures correlation not controlling for intelligence, so there is no way to interpret the coefficient beyond its predictive power.</p>
 <h2 id="why-worry-about-biased-coefficients">Why worry about biased coefficients?</h2>
 <p>The application of the problem should dictate whether biased coefficients need to be dealt with. For <strong>prediction</strong>, biased coefficients should not matter that much. What matters is that the prediction is good, which usually means minimizing variance and bias as much as possible. Coefficient interpretation is just an afterthought. For <strong>causality</strong>, the story is different, because you need to be very careful to avoid confounding. Things to avoid are post-treatment bias, omitted variable bias, conditioning on a collider, or reverse causality. Without an extra construct such as a DAG that captures the relations between the variables, it is impossible to deconfound the model using only regression.</p>
 <p>Those two cases are quite clear-cut. However, there is a <strong>third case which I find problematic</strong>. It is &ldquo;best-practice&rdquo; for researchers to go great lengths to avoid certain kinds of bias, like omitted variable bias. This generally acknowledges the presence of confounding factors that can distort coefficient estimates. At the same time, there is no well-defined strategy to actually understand the nature of confounding. Some variables might be added or removed without a clear plan causing the coefficients and their significances to vary wildly. Focusing on the bias and not on the confounding structure of the variables is short-sighted – it is like treating the symptoms while ignoring the illness. And it creates a false illusion that you are dealing with the bad aspects of the model, while there might still be plenty of pitfalls. <em>Correlation</em> suddenly starts to look and feel deceivingly similar to <em>causation</em>.</p>
@@ -510,15 +510,15 @@
 <p>There are of course three cases which come to mind where bias might be undesirable or misleading: multicollinearity, measurement error and spurious correlations.</p>
 <h3 id="1-multicollinearity">1. Multicollinearity</h3>
 <p>Multicollinearity is the inclusion of superfluous information into the model. Back in the regression example with two variables, we had \(y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \varepsilon\). In the extreme case of perfect multicollinearity we have \(x_1 = x_2\).  By simple algebra, we can rewrite the regression as \(y = \beta_0 + (\beta_1 + \beta_2)x_1 + \varepsilon\). The problem: there are infinite combinations of \(\beta_1 + \beta_2\) that would have the same coefficient as a result. Therefore, the effects and signs of \(\beta_1\) and \(\beta_2\) will be arbitrary and misleading. Besides, the variance of the estimated coefficients \(\hat \beta_1, \hat \beta_2\) will be extremely large and the estimation method of the regression is likely to break, even if the multicollinearity is not perfect. In R you could write:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">N <span style="color:#f92672">&lt;-</span>  <span style="color:#ae81ff">1000</span>
-x_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)
-x_2 <span style="color:#f92672">&lt;-</span> x_1 <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.001</span>) <span style="color:#75715e"># x with a small amount of noise</span>
-y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> x_1 <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>) <span style="color:#75715e"># True effect of x_1 is -1</span>
-
-fit_multi <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(y <span style="color:#f92672">~</span> x_1 <span style="color:#f92672">+</span> x_2)
-<span style="color:#a6e22e">summary</span>(fit_multi)
-</code></pre></div><p>Which results in</p>
-<pre><code class="language-Coefficients:" data-lang="Coefficients:">Coefficients:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>N <span style="color:#f92672">&lt;-</span>  <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>x_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>x_2 <span style="color:#f92672">&lt;-</span> x_1 <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.001</span>) <span style="color:#75715e"># x with a small amount of noise</span>
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> x_1 <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>) <span style="color:#75715e"># True effect of x_1 is -1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fit_multi <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(y <span style="color:#f92672">~</span> x_1 <span style="color:#f92672">+</span> x_2)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(fit_multi)
+</span></span></code></pre></div><p>Which results in</p>
+<pre tabindex="0"><code class="language-Coefficients:" data-lang="Coefficients:">Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
 (Intercept)   1.9451     0.0325   59.90   &lt;2e-16 ***
 x_1         -25.0170    32.6523   -0.77     0.44    
@@ -530,15 +530,15 @@ F-statistic: 1.92e+03 on 2 and 997 DF,  p-value: &lt;2e-16
 </code></pre><p>By looking at the \(R^2\) the model can explain around 80% of the variation in \(y\), but the regressors are insignificant. The standard errors are very large. However, the coefficients of the \(x_1\) and \(x_2\) add up to approximately \(-1\), which is the true coefficient. The F-statistic also indicates that although both coefficients are not significant separately, they are jointly different from 0. If you run the code a couple of times, you will notice that the coefficients jump around quite a bit, but the coefficients always add up to almost \(-1\).</p>
 <h3 id="2-measurement-error">2. Measurement error</h3>
 <p>Let&rsquo;s go back to a simpler model with one variable: \(y = \beta_0 + \beta_1 x + \varepsilon\). Suppose we are only able to measure variable \(x\) with a certain error \(\eta\) with zero mean and unit variance. The regression then becomes \(y = \beta_0 + \beta_1(x + \eta) + \varepsilon\). As \(\hat \beta_1 = \displaystyle \frac{Cov(x, y)}{Var(x)}\), the variance of \(x\) would increase, if we measure it with an error. If \(x\) and \(\eta\) are uncorrelated, then \(Var(x + \eta) = Var(x) + Var(\eta) &gt; Var(x)\). Thus, the estimated \(\hat \beta_1\) will tend to be lower than it should be, as the denominator is larger. This is called <em>attenuation bias</em>. This is a bias that is not causal, as it does not depend on the relation to other variables. A short simulation of this scenario:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">N <span style="color:#f92672">&lt;-</span>  <span style="color:#ae81ff">1000</span>
-x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)
-y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
-
-noisy_x <span style="color:#f92672">&lt;-</span> x <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> , sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
-fit_attenuated <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(y <span style="color:#f92672">~</span> noisy_x)
-<span style="color:#a6e22e">summary</span>(fit_attenuated)
-</code></pre></div><p>The regression summary shows</p>
-<pre><code>Coefficients:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>N <span style="color:#f92672">&lt;-</span>  <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>noisy_x <span style="color:#f92672">&lt;-</span> x <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> , sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>fit_attenuated <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(y <span style="color:#f92672">~</span> noisy_x)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(fit_attenuated)
+</span></span></code></pre></div><p>The regression summary shows</p>
+<pre tabindex="0"><code>Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
 (Intercept)    7.257      0.361    20.1   &lt;2e-16 ***
 noisy_x        7.970      0.120    66.5   &lt;2e-16 ***
@@ -551,19 +551,18 @@ F-statistic: 4.42e+03 on 1 and 998 DF,  p-value: &lt;2e-16
 </code></pre><p>In this case, the coefficient estimate is around 8, which is 20% lower than the true coefficient from the simulation. This bias cannot be removed by deconfounding the model. The noisier regressor is also more likely to produce worse predictions.</p>
 <h3 id="3-spurious-correlations">3. Spurious correlations</h3>
 <p>The third type of bias is when spurious correlations are introduced. One example comes from time series, when trying to regress a random walk on another random walk. Another simple example can be shown through collider bias. Suppose we want to find out whether we can predict food quality in restaurants given their  location and revenue (this example for collider bias is taken from Statistical Rethinking). The true relation between variables is given by the following graph, where $ is revenue, F is food quality and L the location:</p>
-<figure class="center">
-    <img src="/images/posts/bias/collider.png"/> <figcaption>
+<figure class="center"><img src="/images/posts/bias/collider.png"/><figcaption>
             <h4>Revenue ($), location (L) and food quality (F)</h4>
         </figcaption>
 </figure>
 
 <p>Note that food quality and location are completely independent. Let&rsquo;s now write some code to simulate the graph:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">N <span style="color:#f92672">&lt;-</span>  <span style="color:#ae81ff">1000</span>
-food <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
-location <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
-revenue <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> food <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> location <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
-</code></pre></div><p>If we run a simple regression with only revenue as an explanatory variable, we will a measure of the correlation between revenue and food quality. This effect can <em>never</em> be causal, as food quality causes higher revenue and not the other way around. Therefore, in this example there is no way to deconfound the model. We get the following result:</p>
-<pre><code>lm(formula = food ~ revenue)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>N <span style="color:#f92672">&lt;-</span>  <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>food <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>location <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>revenue <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> food <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> location <span style="color:#f92672">+</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>If we run a simple regression with only revenue as an explanatory variable, we will a measure of the correlation between revenue and food quality. This effect can <em>never</em> be causal, as food quality causes higher revenue and not the other way around. Therefore, in this example there is no way to deconfound the model. We get the following result:</p>
+<pre tabindex="0"><code>lm(formula = food ~ revenue)
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
@@ -576,7 +575,7 @@ Residual standard error: 0.474 on 998 degrees of freedom
 Multiple R-squared:  0.885,	Adjusted R-squared:  0.885 
 F-statistic: 7.68e+03 on 1 and 998 DF,  p-value: &lt;2e-16
 </code></pre><p>If we include location in the regression, something strange happens. By conditioning on the collider, information flows from food quality to location. Suddenly, location is a significant predictor of revenue. However, remember that both variables are independent. The results from the regression can be summarized as follows:</p>
-<pre><code>lm(formula = food ~ revenue + location)
+<pre tabindex="0"><code>lm(formula = food ~ revenue + location)
 
 Coefficients:
              Estimate Std. Error t value Pr(&gt;|t|)    
@@ -628,8 +627,8 @@ F-statistic: 9.32e+04 on 2 and 997 DF,  p-value: &lt;2e-16
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
-    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    src="/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>podcasts on Flavio Morelli</title>
+    <link>https://flaviomorelli.com/tags/podcasts/</link>
+    <description>Recent content in podcasts on Flavio Morelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Aug 2022 18:21:27 +0200</lastBuildDate><atom:link href="https://flaviomorelli.com/tags/podcasts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some resources to learn about pharma and biotech</title>
+      <link>https://flaviomorelli.com/post/pharma_resources/</link>
+      <pubDate>Tue, 30 Aug 2022 18:21:27 +0200</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/pharma_resources/</guid>
+      
+        <description>A year ago, I got the opportunity to work as an intern at a large pharmaceutical company.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

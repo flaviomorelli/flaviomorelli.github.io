@@ -322,7 +322,7 @@
       &copy;
       
         Flavio Morelli
-        2022
+        2023
 
 
       
@@ -557,7 +557,7 @@ lab           0.54      0.09     0.36     0.71 1.00     3104     2298
 </code></pre><p>According to this model, the presence of a virology lab increases the outbreak odds by a factor of <code>exp(0.54) = 1.71</code>.
 Looking at the credible interval for <code>lab</code>, realistic values for the odds ratios are between <code>exp(0.36) = 1.43</code> and <code>exp(0.71) = 2.03</code>.
 This means that the mere existence of a lab would almost double the odds of a disease outbreak in the worst case.</p>
-<p>Before we grab our pitchforks and burn down the lab, we remember that counfounding can be a problem when estimating a model.
+<p>Before we grab our pitchforks and burn down the lab, we remember that confounding can be a problem when estimating a model.
 Fortunately, we also have information on the city population, which we can easily plug into our logistic regression.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>causal_reg <span style="color:#f92672">&lt;-</span> brms<span style="color:#f92672">::</span><span style="color:#a6e22e">brm</span>(formula <span style="color:#f92672">=</span> outbreak <span style="color:#f92672">~</span> lab <span style="color:#f92672">+</span> population,
 </span></span><span style="display:flex;"><span>                            data <span style="color:#f92672">=</span> df,
@@ -619,7 +619,7 @@ The lab leak theory might be yet another example of us forgetting that &lsquo;co
       &copy;
       
         Flavio Morelli
-        2022
+        2023
 
 
       

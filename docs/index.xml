@@ -6,7 +6,18 @@
     <description>Recent content on Flavio Morelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Oct 2022 16:09:57 +0200</lastBuildDate><atom:link href="https://flaviomorelli.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Apr 2023 14:29:00 +0200</lastBuildDate><atom:link href="https://flaviomorelli.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assumptions Matter: Ignoring Them Can Invalidate Your Findings</title>
+      <link>https://flaviomorelli.com/post/assumptions-matter/</link>
+      <pubDate>Thu, 27 Apr 2023 14:29:00 +0200</pubDate>
+      
+      <guid>https://flaviomorelli.com/post/assumptions-matter/</guid>
+      
+        <description>Earlier this week, I attended an amazing talk at PyConDE / PyData 2023 on data engineering.</description>
+      
+    </item>
+    
     <item>
       <title>The Covid-19 lab leak theory is a textbook example of confounding</title>
       <link>https://flaviomorelli.com/post/lab_leakage/</link>

@@ -131,7 +131,7 @@ According to this model, the presence of a virology lab increases the outbreak o
 Looking at the credible interval for `lab`, realistic values for the odds ratios are between `exp(0.36) = 1.43` and `exp(0.71) = 2.03`.
 This means that the mere existence of a lab would almost double the odds of a disease outbreak in the worst case.
 
-Before we grab our pitchforks and burn down the lab, we remember that counfounding can be a problem when estimating a model.
+Before we grab our pitchforks and burn down the lab, we remember that confounding can be a problem when estimating a model.
 Fortunately, we also have information on the city population, which we can easily plug into our logistic regression.
 
 ```R

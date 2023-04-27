@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      Flavio Morelli
+        |
+        Assumptions Matter: Ignoring Them Can Invalidate Your Findings
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Flavio Morelli" />
+  <meta
+    name="description"
+    content="
+      Machine Learning Scientist @ Bayer Pharmaceuticals | M. Sc. Statistics @ HU Berlin
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://flaviomorelli.com/post/assumptions-matter/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Assumptions Matter: Ignoring Them Can Invalidate Your Findings"/>
+<meta name="twitter:description" content="Earlier this week, I attended an amazing talk at PyConDE / PyData 2023 on data engineering."/>
+
+
+
+  
+  <meta property="og:title" content="Assumptions Matter: Ignoring Them Can Invalidate Your Findings" />
+<meta property="og:description" content="Earlier this week, I attended an amazing talk at PyConDE / PyData 2023 on data engineering." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://flaviomorelli.com/post/assumptions-matter/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-04-27T14:29:00+02:00" />
+<meta property="article:modified_time" content="2023-04-27T14:29:00+02:00" /><meta property="og:site_name" content="Flavio Morelli" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Assumptions Matter: Ignoring Them Can Invalidate Your Findings",
+        "headline": "Assumptions Matter: Ignoring Them Can Invalidate Your Findings",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Earlier this week, I attended an amazing talk at PyConDE \/ PyData 2023 on data engineering.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/flaviomorelli.com\/post\/assumptions-matter\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Flavio Morelli"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Flavio Morelli"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Flavio Morelli"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Flavio Morelli"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-04-27T14:29:00.00Z",
+        "datePublished": "2023-04-27T14:29:00.00Z",
+        "dateModified": "2023-04-27T14:29:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Flavio Morelli",
+            "url": "https://flaviomorelli.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/flaviomorelli.com\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/flaviomorelli.com\/post\/assumptions-matter\/",
+        "wordCount" : "1767",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/flavio_rest.png"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Flavio Morelli</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Machine Learning Scientist @ Bayer Pharmaceuticals | M. Sc. Statistics @ HU Berlin</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://de.linkedin.com/in/mexiamorelli"
+            target="_blank"
+            rel="noopener"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.twitter.com/mexiamorelli"
+            target="_blank"
+            rel="noopener"
+            aria-label="twitter"
+            title="twitter"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/flaviomorelli/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:info@flaviomorelli.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Flavio Morelli
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/talks/"
+              
+              title=""
+              >Talks</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/consulting/"
+              
+              title=""
+              >Consulting</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Assumptions Matter: Ignoring Them Can Invalidate Your Findings</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                Thu, Apr 27, 2023
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">9-minute read</span>
+          </li>
+        </ul>
+
+      <p>Earlier this week, I attended an amazing talk at PyConDE / PyData 2023 on data engineering. At some point, the speaker made the point that data engineers have to understand basic statistics for their jobs and showed a list of common statistical tests that people should know. Then, he made a lengthy real-world example using a <em>t</em>-test. I am all for it when it comes down to statistical literacy, and believe that a little understanding about probabilities would help a lot of people make more informed judgements.</p>
+<p>However, there were two things I found a bit troubling about this message. First, some people might think that statistics is only a set of tests that can be imported from <code>scipy</code>, and that can give you infallible insights about your data – after all, the test is making the decision so that you don&rsquo;t have to make it, right? Second, the hard thing about statistics is not necessarily understanding the toolbox, but reminding yourself that everything depends on the theoretical assumptions of each method.</p>
+<p>This blog post will make the following points: 1) statistical tests can and should be reformulated as models most of the time, 2) knowing the assumptions is key to understand the reliability of your model. We&rsquo;ll also do a short simulation example in NumPy to illustrate how to break a test and how you can fix it with standard tools.</p>
+<h1 id="statistical-tests-are-a-poor-substitute-for-models">Statistical tests are a poor substitute for models</h1>
+<p>Statistics is much more than a canonical list of tests. Statistical tests come from a time in which many of the computations had to be done by hand. In reality, many well-known tests are just probabilistic models in disguise. Jonas Lindeløv has an <a href="https://lindeloev.github.io/tests-as-linear/">amazing list</a> of tests reformulated as a model. The main issue is that it is tricky to compute a regression manually. Want to estimate a linear regression? Well, to estimate the regression parameters you have to multiply a bunch of matrices with each other. Not so fun. Oh yeah, and don&rsquo;t forget that matrix inversion. Even less fun. Want to estimate a t-test? Calculate the mean and standard deviation and you&rsquo;re pretty much good to go! What&rsquo;s not to like, huh?</p>
+<p>Luckily, we have computers nowadays. They abstract away a lot of the tedious work that makes university students hate statistics in the first place (yes, computing standard deviations by hand is extremely boring). There&rsquo;s no reason to use a test if you can use a model that gives you flexibility with regards to the type of information you can include. You can even use a Bayesian model that allows for even more flexibility regarding the <em>assumptions</em> you include into the model, and go crazy with the likelihood or add a hierarchical structure to your model.</p>
+<h1 id="if-you-dont-know-the-assumptions-you-dont-understand-the-method">If you don&rsquo;t know the assumptions, you don&rsquo;t understand the method</h1>
+<p>This leads me to my second point: assumptions. Every statistical test relies on assumptions. Usually, the assumption is related to the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central Limit Theorem</a> (CLT), which provides a powerful result that under certain cirumstances the mean of a random variable is a Gaussian, no matter what the distribution of that random variable is. It is one of those results that seem like mathematical magic. (If it&rsquo;s the first time you hear about the CLT, consider spending time understanding its meaning and implications.) Unfortunately, the assumptions that underlie the CLT are often not fulfilled.</p>
+<p>Do you have to be a math genius to understand the assumptions? I don&rsquo;t think so, but it might take some work. Let&rsquo;s check the <a href="https://en.wikipedia.org/wiki/Student%27s_t-test#Assumptions">Wikipedia article</a> for the <em>t</em>-test. One of the key assumptions is that the sample mean $\bar X$ of the data needs to be normally distributed. How do I know that? The CLT gives you the answer to that: the mean of a (sufficiently large) sample is normally distributed when the single observations are independent from each other (this is the more general version of Lyapunov that does not assume identical distribution of the observations as long as the variance of any individual observation doesn&rsquo;t get out of whack). Informally, independence means that there is no information shared between observations. This implies that two independent variable cannot be correlated. As we will see, this is quite a restrictive condition.</p>
+<h1 id="tests-break-down-easier-than-you-expect">Tests break down easier than you expect</h1>
+<p>Breaking a test is easier than you might think. In the real world, true independence is quite rare. Even small amounts of correlation between observations can invalidate a test that relies on the CLT. This might happen in a very subtle way when you have a grouped structure in the data like data from multiple countries, or multiple measurements for the same individual.</p>
+<p>To illustrate this, let&rsquo;s do a small simulation study. We will use the following libraries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.stats <span style="color:#f92672">import</span> ttest_1samp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.linalg <span style="color:#f92672">import</span> block_diag
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> statsmodels.api <span style="color:#66d9ef">as</span> sm
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span></code></pre></div><p>We will simulate a population with 10 different groups (<code>n_groups</code>) with 100 observations in each group (<code>group_size</code>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>group_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>n_groups <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>group <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>repeat(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10</span>), repeats<span style="color:#f92672">=</span>group_size)
+</span></span><span style="display:flex;"><span>total_size <span style="color:#f92672">=</span> group_size <span style="color:#f92672">*</span> n_groups
+</span></span><span style="display:flex;"><span>reps <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span></code></pre></div><p><code>group</code> is a variable that contains the group assignment for each observation and <code>reps</code> determines the number of synthetic populations that we will create.</p>
+<p>To ensure reproducibility we set the seed and pass it to a random number generator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>seed <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>rng <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>default_rng(seed)
+</span></span></code></pre></div><p>We define a baseline that consists of perfectly independent observations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>independent <span style="color:#f92672">=</span> rng<span style="color:#f92672">.</span>normal(size<span style="color:#f92672">=</span>(total_size, reps))
+</span></span></code></pre></div><p>Next, we generate a data set with a clustered structure. For this, we use a <a href="https://en.wikipedia.org/wiki/Block_matrix#Block_diagonal_matrices">block diagonal matrix</a>, which makes sure that correlation between groups is zero, while within-group correlation is uniformly sampled between 0.1% and 5%. Keep in mind that a correlation of 5% is usually considered to be extremely low, and you might be tempted to think that it will not have a big impact on the results.
+We use <code>np.fill_diagonal</code> to make sure that all observations have unit variance:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>covariance <span style="color:#f92672">=</span> block_diag(
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>[rng<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">0.001</span>, <span style="color:#ae81ff">0.05</span>, (group_size, group_size)) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n_groups)]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>fill_diagonal(covariance, <span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>Finally, we use the block diagonal covariance matrix to generate 100 synthetic populations of size 1000 with a multivariate normal distribution. All the distribution means are set to 0:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>clusters <span style="color:#f92672">=</span> rng<span style="color:#f92672">.</span>multivariate_normal(
+</span></span><span style="display:flex;"><span>    mean<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>zeros(total_size), cov<span style="color:#f92672">=</span>covariance, size<span style="color:#f92672">=</span>reps
+</span></span><span style="display:flex;"><span>)<span style="color:#f92672">.</span>T
+</span></span></code></pre></div><p>Great! Now that we have our two synthetic populations we can see what happens with a simple one-sample t-test that checks whether the population mean is equal to zero. Assuming a significance level of 5%, you&rsquo;d expect to see a type I error around 5% of the time. This means that we would falsely reject the null hypothesis (here: the sample mean is equal to zero) around 5% of the time. Luckily, we already have 100 repetitions of our population. If we do a test for each repetition, we&rsquo;d expect that the p-value will be below 0.05 around 5 times. We also know for sure that the true mean is zero, so rejecting the null hypothesis more than 5% of the time should be a red flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>(ttest_1samp(independent, popmean<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>pvalue <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>)<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><p>In this case, we would wrongfully reject the hypothesis &ldquo;sample mean == 0&rdquo; around five times, which matches exactly what you&rsquo;d expect from the theory.
+What about our clustered example?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>(ttest_1samp(clusters, popmean<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>pvalue <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>)<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">34</span>
+</span></span></code></pre></div><p>Ouch! We are off by <strong>a lot</strong>. This shows very clearly how a very small amount of correlation within groups can completely invalidate a statistical tests, even though by design our data has zero mean.</p>
+<p>Why does this happen? The CLT assumes independence for the sample mean to be approximately a Gaussian distribution. If this assumption is not met, then pretty much anything can happen. Let&rsquo;s compare the densities of the standardized means for each scenario:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>kdeplot(clusters<span style="color:#f92672">.</span>mean(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#f92672">/</span> clusters<span style="color:#f92672">.</span>std(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>))
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>kdeplot(independent<span style="color:#f92672">.</span>mean(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#f92672">/</span> independent<span style="color:#f92672">.</span>std(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>))
+</span></span></code></pre></div><p><img src="/images/posts/assumptions/breaking_tests_mean.png" alt="CLT came down in flames">
+In short, the distribution of the standardized mean is much wider for the clustered scenario (blue line) than what is required by the CLT (orange line). A wider distribution in this context translates directly into more test rejections.</p>
+<h1 id="fixing-the-test-with-a-linear-regression">Fixing the test with a linear regression</h1>
+<p>We already mentioned that most tests can be defined as a model. This gives us a few more tools to deal with correlation between observations, especially when we know that there might be a clustered structure in the data.</p>
+<p>We will estimate the <em>t</em>-test as a regression, and we will use a clustered covariance matrix in the model to correct the standard errors and get valid p-values. The <code>fit</code> method of the <code>OLS</code> regression in the package <code>statsmodels</code> accepts a <code>cov_type</code> argument that can be used to define a clustered covariance matrix. Moreover, you have to pass the grouping variable as a keyword with <code>cov_kwds</code>.
+To do the <em>t</em>-test, as a regression we pass the variable of interest as a (y) and an array of ones as an (X).
+Fitting the regression for all the clusters, looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>pvalues <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> cluster <span style="color:#f92672">in</span> clusters<span style="color:#f92672">.</span>T:
+</span></span><span style="display:flex;"><span>    value <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>        sm<span style="color:#f92672">.</span>OLS(cluster, np<span style="color:#f92672">.</span>ones(total_size))
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span>fit(cov_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cluster&#34;</span>, cov_kwds<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;groups&#34;</span>: group})
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span>pvalues
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    pvalues<span style="color:#f92672">.</span>append(value)
+</span></span><span style="display:flex;"><span>pvalues <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>concatenate(pvalues)
+</span></span></code></pre></div><p>We are using the p-values from the <em>t</em>-test on the intercept that is done by default in <code>statmodels</code> to check whether our population mean is equal to zero:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>(pvalues <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0.05</span>)<span style="color:#f92672">.</span>sum()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">8</span>
+</span></span></code></pre></div><p>This is not exactly 5, but it is in the same ballpark as the theoretical ideal. It might be a bit higher due to randomness. Most importantly, it is not as far off as with the vanilla <em>t</em>-test, so in this case the results would be more trustworthy.</p>
+<h1 id="key-takeaways">Key takeaways</h1>
+<p>I hope that this short example showed that it is never a good idea to use statistical methods without understanding the assumptions. Unfortunately, there is no list of the top ten statistical procedures that everyone should know. Real-world data is complicated and the context of the data determines the method. Moreover, statistics and probability are the language of uncertainty, and it&rsquo;s not the most intuitive language to learn. There are no shortcuts.</p>
+<p>The next time you use a statistical test ask yourself the following questions:</p>
+<ul>
+<li>Do I understand the assumptions behind this method? Do I need to run a simple simulation to uncover potential pitfalls?</li>
+<li>Am I integrating all the information available?</li>
+<li>Is there a way to turn this test into a model, and are there additional tools in a model that could be used?</li>
+</ul>
+<p>To sum up, taking the time to thoroughly understand the assumptions and context of statistical methods is crucial for producing trustworthy and accurate results. I hope that this blog post provided some insights into why this is important and how to do some quick checks in practice with Python.</p>
+<p>GitHub: <a href="https://github.com/flaviomorelli">@flaviomorelli</a>
+Mastodon: <a href="https://sigmoid.social/@flaviomorelli">@flaviomorelli@sigmoid.social</a>
+Twitter: <a href="https://twitter.com/mexiamorelli">@mexiamorelli</a></p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Flavio Morelli
+        2023
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>

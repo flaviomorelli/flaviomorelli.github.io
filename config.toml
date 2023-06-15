@@ -23,7 +23,7 @@ Search = "true"
 title = "Flavio Morelli"
 author = "Flavio Morelli"
 description =  "Machine Learning Scientist @ Bayer Pharmaceuticals | M. Sc. Statistics @ HU Berlin"
-profilePicture = "images/flavio_rest.png"
+profilePicture = "images/flavio_plants.png"
 
 [params.math]
 enable = true  # options: true, false. Enable math support globally, default: false.
